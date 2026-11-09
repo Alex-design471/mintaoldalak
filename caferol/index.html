@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Caferol Kávézó & Bistro – Andrássy út 79.</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4efe6;--ink:#1d2a24;--muted:#5d6b63;--green:#2f5d4a;--yolk:#f2b33d;--card:#fffdf8;--line:#ddd3c2}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:"Space Grotesk",sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;overflow-x:hidden}
+a{color:inherit}
+.demo{background:var(--ink);color:#f4efe6;text-align:center;font-size:12.5px;padding:6px 16px}
+h1,h2,h3{font-family:"DM Serif Display",serif;font-weight:400;margin:0;line-height:1.05}
+nav{display:flex;justify-content:space-between;align-items:center;padding:16px clamp(16px,4vw,48px);border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(244,239,230,.92);backdrop-filter:blur(8px);z-index:10}
+.logo{font-family:"DM Serif Display";font-size:1.6rem}.logo span{color:var(--green);font-style:italic}
+nav ul{display:flex;gap:24px;list-style:none;margin:0;padding:0;font-size:.92rem}nav ul a{text-decoration:none;color:var(--muted)}nav ul a:hover{color:var(--green)}
+@media(max-width:760px){nav ul{display:none}}
+.btn{display:inline-block;background:var(--green);color:#fff;text-decoration:none;border:2px solid var(--green);border-radius:10px;padding:12px 22px;font:700 15px "Space Grotesk";cursor:pointer;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}.btn.out{background:transparent;color:var(--green)}.btn.yolk{background:var(--yolk);border-color:var(--yolk);color:var(--ink)}
+.hero{max-width:1200px;margin:0 auto;padding:clamp(40px,7vw,90px) clamp(16px,4vw,48px);display:grid;grid-template-columns:1.15fr 1fr;gap:40px;align-items:center}
+@media(max-width:860px){.hero{grid-template-columns:1fr}}
+.tag{display:inline-flex;gap:8px;align-items:center;border:1.5px solid var(--ink);border-radius:999px;padding:4px 14px;font-size:.82rem;font-weight:700}
+.tag i{width:8px;height:8px;border-radius:50%;background:#3aa769;display:inline-block}
+.tag.closed i{background:#c4553f}
+h1{font-size:clamp(3rem,8vw,5.6rem);margin:18px 0}h1 em{color:var(--green)}
+.hero p{color:var(--muted);font-size:1.08rem;max-width:480px;margin:0 0 26px}
+.hero .btns{display:flex;gap:12px;flex-wrap:wrap}
+.plate{position:relative;aspect-ratio:1;max-width:440px;margin:0 auto;width:100%}
+.plate svg{width:100%;height:100%}
+.steam path{animation:steam 3s ease-in-out infinite;opacity:.6}.steam path:nth-child(2){animation-delay:.6s}.steam path:nth-child(3){animation-delay:1.2s}
+@keyframes steam{0%{transform:translateY(6px);opacity:0}50%{opacity:.6}100%{transform:translateY(-14px);opacity:0}}
+.strip{background:var(--green);color:#f4efe6;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.strip div{padding:22px clamp(16px,3vw,32px);border-right:1px solid rgba(255,255,255,.15)}
+.strip b{font-family:"DM Serif Display";font-size:1.35rem;font-weight:400;display:block}.strip span{opacity:.8;font-size:.92rem}
+section{max-width:1200px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(16px,4vw,48px)}
+.kicker{color:var(--green);font-weight:700;letter-spacing:.18em;text-transform:uppercase;font-size:.75rem}
+h2{font-size:clamp(2.2rem,5vw,3.4rem);margin:8px 0 30px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+.tab{border:1.5px solid var(--line);background:transparent;border-radius:999px;padding:8px 18px;font:700 14px "Space Grotesk";cursor:pointer;color:var(--ink)}
+.tab.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.menu{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+.dish{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;display:flex;gap:16px;align-items:flex-start;animation:pop .35s}
+@keyframes pop{from{opacity:0;transform:translateY(8px)}}
+.dish .ic{flex:0 0 46px;height:46px;border-radius:12px;display:grid;place-items:center;font-size:1.4rem;background:#ece4d3}
+.dish h3{font-size:1.35rem}.dish p{margin:4px 0 0;color:var(--muted);font-size:.92rem}
+.note{color:var(--muted);font-size:.88rem;margin-top:18px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:28px}@media(max-width:860px){.split{grid-template-columns:1fr}}
+.feature{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:30px}
+.feature h3{font-size:1.9rem;margin:10px 0 8px}.feature p{color:var(--muted);margin:0}
+.feature.dark{background:var(--ink);color:var(--bg);border-color:var(--ink)}.feature.dark p{color:#c9c2b4}
+.big{font-size:2.6rem}
+form{display:grid;gap:14px}
+.row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}@media(max-width:600px){.row{grid-template-columns:1fr}}
+label{display:grid;gap:6px;font-size:.85rem;font-weight:700}
+input,select,textarea{font:inherit;font-weight:400;padding:11px 12px;border:1.5px solid var(--line);border-radius:10px;background:#fff;width:100%;color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--green)}
+.people{display:flex;gap:8px;flex-wrap:wrap}
+.people button{width:44px;height:44px;border-radius:10px;border:1.5px solid var(--line);background:#fff;font:700 15px "Space Grotesk";cursor:pointer}
+.people button.on{background:var(--green);color:#fff;border-color:var(--green)}
+.ok{display:none;background:#e3efe7;border:1px solid #b9d4c3;border-radius:12px;padding:14px}
+.info{display:grid;grid-template-columns:1fr 1.3fr;gap:28px}@media(max-width:860px){.info{grid-template-columns:1fr}}
+.hours{width:100%;border-collapse:collapse}.hours td{padding:9px 0;border-bottom:1px dashed var(--line)}.hours td:last-child{text-align:right}
+.hours tr.t td{font-weight:700;color:var(--green)}
+iframe{width:100%;height:100%;min-height:340px;border:0;border-radius:20px}
+footer{background:var(--ink);color:#c9c2b4;padding:32px clamp(16px,4vw,48px) 90px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.9rem}
+footer b{font-family:"DM Serif Display";font-weight:400;font-size:1.4rem;color:#fff}
+.mbar{display:none;position:fixed;inset:auto 0 0;gap:10px;padding:10px 16px;background:rgba(244,239,230,.96);border-top:1px solid var(--line);z-index:20}
+.mbar a{flex:1;text-align:center}@media(max-width:760px){.mbar{display:flex}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="demo">MINTAOLDAL – bemutató célra készült, nem a kávézó hivatalos oldala. A foglalás nem működik élesben.</div>
+<nav>
+  <div class="logo">Caferol <span>Kávézó & Bistro</span></div>
+  <ul><li><a href="#kinalat">Kínálat</a></li><li><a href="#foglalas">Asztalfoglalás</a></li><li><a href="#elerhetoseg">Elérhetőség</a></li></ul>
+  <a class="btn" href="#foglalas">Asztalt foglalok</a>
+</nav>
+
+<div class="hero">
+  <div>
+    <span class="tag" id="open"><i></i><span>Nyitvatartás betöltése…</span></span>
+    <h1>Reggeli az<br><em>Andrássyn,</em><br>laptop nélkül.</h1>
+    <p>Olasz kávé, brunch és házias fogások egy nyugodt kávézóban, ahol a beszélgetésé a főszerep. Nyáron terasszal.</p>
+    <div class="btns">
+      <a class="btn" href="#foglalas">Asztalt foglalok</a>
+      <a class="btn yolk" href="https://wolt.com/hu/search?q=Caferol" target="_blank" rel="noopener">Rendelés Wolton</a>
+      <a class="btn out" href="tel:+36202223893">Hívás</a>
+    </div>
+  </div>
+  <div class="plate" aria-hidden="true">
+    <svg viewBox="0 0 400 400">
+      <circle cx="200" cy="210" r="170" fill="#fffdf8" stroke="#ddd3c2" stroke-width="2"/>
+      <circle cx="200" cy="210" r="140" fill="none" stroke="#ece4d3" stroke-width="2"/>
+      <g transform="translate(145 175)"><ellipse cx="0" cy="0" rx="62" ry="54" fill="#fff"/><circle cx="6" cy="-4" r="22" fill="#f2b33d"/><circle cx="0" cy="-10" r="6" fill="#fff" opacity=".6"/></g>
+      <g transform="translate(262 165) rotate(-12)"><rect x="-38" y="-20" width="76" height="40" rx="18" fill="#c98b4e"/><rect x="-32" y="-15" width="64" height="30" rx="14" fill="#e3b37a"/><path d="M-20 -6h40M-20 6h40" stroke="#c98b4e" stroke-width="3" stroke-linecap="round"/></g>
+      <g transform="translate(230 275)"><circle cx="0" cy="0" r="16" fill="#c4553f"/><circle cx="26" cy="8" r="13" fill="#7a3fa0"/><circle cx="12" cy="-20" r="11" fill="#c4553f"/><circle cx="-22" cy="12" r="10" fill="#7a3fa0"/></g>
+      <g transform="translate(140 285)"><path d="M-30 0q30 -30 60 0q-30 18 -60 0z" fill="#2f5d4a"/><path d="M-30 0h60" stroke="#fffdf8" stroke-width="1.5"/></g>
+      <g transform="translate(330 70)">
+        <g class="steam" fill="none" stroke="#5d6b63" stroke-width="2.5" stroke-linecap="round"><path d="M-10 -10q-6 -10 0 -20t0 -20"/><path d="M2 -10q-6 -10 0 -20t0 -20"/><path d="M14 -10q-6 -10 0 -20t0 -20"/></g>
+        <path d="M-28 -4h56l-6 44a12 12 0 0 1-12 10h-20a12 12 0 0 1-12-10z" fill="#1d2a24"/><path d="M28 6q18 0 18 14t-18 14" fill="none" stroke="#1d2a24" stroke-width="6"/>
+        <ellipse cx="0" cy="-4" rx="28" ry="6" fill="#6b4a2f"/>
+      </g>
+    </svg>
+  </div>
+</div>
+
+<div class="strip">
+  <div><b>Laptopmentes</b><span>Itt a beszélgetésé a főszerep.</span></div>
+  <div><b>Nyári terasz</b><span>Reggeli a friss levegőn.</span></div>
+  <div><b>Házhoz is</b><span>Rendelhető a Wolton.</span></div>
+  <div><b>Andrássy út 79.</b><span>Budapest VI. kerület</span></div>
+</div>
+
+<section id="kinalat">
+  <div class="kicker">Kínálat</div>
+  <h2>Mit kérsz ma reggel?</h2>
+  <div class="tabs" id="tabs"></div>
+  <div class="menu" id="menu"></div>
+  <p class="note">A pontos étlapot és árakat a végleges oldalon a kávézó saját kínálata alapján tüntetjük fel.</p>
+</section>
+
+<section>
+  <div class="split">
+    <div class="feature dark"><div class="big">☕</div><h3>Olasz kávé, rendesen.</h3><p>Espresso, cappuccino, flat white – figyelmes, baráti kiszolgálással.</p></div>
+    <div class="feature"><div class="big">🍳</div><h3>Brunch egész nap.</h3><p>Reggelizni nem csak reggel lehet: a brunch zárásig rendelhető.</p></div>
+  </div>
+</section>
+
+<section id="foglalas">
+  <div class="kicker">Asztalfoglalás</div>
+  <h2>Foglalj asztalt pár kattintással</h2>
+  <div class="feature">
+    <form id="f">
+      <div><b style="font-size:.85rem">Hány főre?</b><div class="people" id="ppl" style="margin-top:8px"></div></div>
+      <div class="row">
+        <label>Nap<input type="date" id="d" required></label>
+        <label>Időpont<select id="t" required><option value="">Előbb válassz napot</option></select></label>
+        <label>Hol ülnél?<select><option>Mindegy</option><option>Bent</option><option>Teraszon (szezonban)</option></select></label>
+      </div>
+      <div class="row">
+        <label>Név<input required autocomplete="name"></label>
+        <label>Telefonszám<input type="tel" required autocomplete="tel"></label>
+        <label>Megjegyzés<input placeholder="pl. babakocsi, születésnap"></label>
+      </div>
+      <button class="btn" type="submit">Foglalási kérés elküldése</button>
+      <div class="ok" id="ok"></div>
+    </form>
+  </div>
+</section>
+
+<section id="elerhetoseg">
+  <div class="kicker">Elérhetőség</div>
+  <h2>Itt találsz minket</h2>
+  <div class="info">
+    <div class="feature">
+      <p><b>Cím:</b> 1062 Budapest, Andrássy út 79.</p>
+      <p><b>Telefon:</b> <a href="tel:+36202223893">06 20 222 3893</a></p>
+      <p><b>E-mail:</b> <a href="mailto:caferol@caferol.hu">caferol@caferol.hu</a></p>
+      <h3 style="font-size:1.4rem;margin:18px 0 6px">Nyitvatartás</h3>
+      <table class="hours" id="hours"></table>
+    </div>
+    <iframe loading="lazy" title="Térkép" src="https://www.google.com/maps?q=1062+Budapest,+Andr%C3%A1ssy+%C3%BAt+79.&output=embed"></iframe>
+  </div>
+</section>
+
+<footer><span><b>Caferol</b><br>Kávézó & Bistro</span><span>1062 Budapest, Andrássy út 79. · 06 20 222 3893</span></footer>
+<div class="mbar"><a class="btn out" href="tel:+36202223893">Hívás</a><a class="btn" href="#foglalas">Foglalás</a></div>
+
+<script>
+// Nyitvatartás: [nyit, zár] percben, null = zárva
+const HN=['Hétfő','Kedd','Szerda','Csütörtök','Péntek','Szombat','Vasárnap'];
+const HO=[[510,1020],[510,960],[510,960],[510,960],[510,1020],[510,1020],[510,1020]];
+const f=m=>`${Math.floor(m/60)}:${String(m%60).padStart(2,'0')}`;
+const now=new Date(),td=(now.getDay()+6)%7,mins=now.getHours()*60+now.getMinutes();
+document.getElementById('hours').innerHTML=HN.map((n,i)=>`<tr class="${i===td?'t':''}"><td>${n}${i===td?' · ma':''}</td><td>${HO[i]?f(HO[i][0])+'–'+f(HO[i][1]):'Zárva'}</td></tr>`).join('');
+const o=HO[td],isOpen=o&&mins>=o[0]&&mins<o[1],tag=document.getElementById('open');
+tag.classList.toggle('closed',!isOpen);
+tag.querySelector('span').textContent=isOpen?`Most nyitva · ${f(o[1])}-ig`:'Most zárva · holnap is várunk';
+const M={
+ "Kávé":[["☕","Espresso, cappuccino","Olasz pörkölésű kávéból, klasszikus arányokkal."],["🥛","Flat white, latte","Növényi tejjel is kérhető."],["🧊","Jeges kávék","Nyári kedvencek a teraszra."]],
+ "Reggeli & brunch":[["🍳","Tojásos reggelik","Pirítóssal, friss körettel."],["🥞","Amerikai palacsinta","Gyümölccsel, sziruppal, ahogy szereted."],["🥣","Granola","Joghurttal és szezonális gyümölccsel."]],
+ "Szendvics & quiche":[["🥪","Szendvicsek","Frissen összerakva, kovászos kenyérben."],["🥧","Quiche","Házi tésztában, salátával."]],
+ "Házias":[["🍲","Gulyásleves","Kovászos kenyérrel, ahogy a nagykönyvben."],["🥗","Napi ajánlat","Kérdezd a pultnál, mi a mai."]]};
+const tabs=document.getElementById('tabs'),menu=document.getElementById('menu');
+Object.keys(M).forEach((k,i)=>{const b=document.createElement('button');b.className='tab'+(i?'':' on');b.textContent=k;
+ b.onclick=()=>{[...tabs.children].forEach(x=>x.classList.remove('on'));b.classList.add('on');show(k)};tabs.appendChild(b)});
+function show(k){menu.innerHTML=M[k].map(d=>`<div class="dish"><div class="ic">${d[0]}</div><div><h3>${d[1]}</h3><p>${d[2]}</p></div></div>`).join('')}
+show("Kávé");
+let ppl=2;const P=document.getElementById('ppl');
+for(let i=1;i<=8;i++){const b=document.createElement('button');b.type='button';b.textContent=i===8?'8+':i;if(i===ppl)b.className='on';
+ b.onclick=()=>{ppl=i;[...P.children].forEach(x=>x.classList.remove('on'));b.classList.add('on')};P.appendChild(b)}
+const d=document.getElementById('d'),t=document.getElementById('t');d.min=now.toISOString().slice(0,10);
+d.onchange=()=>{const h=HO[(new Date(d.value).getDay()+6)%7];t.innerHTML='';
+ if(!h){t.innerHTML='<option value="">Aznap zárva</option>';return}
+ for(let m=h[0];m<=h[1]-60;m+=30){const op=document.createElement('option');op.textContent=f(m);t.appendChild(op)}};
+document.getElementById('f').onsubmit=e=>{e.preventDefault();const ok=document.getElementById('ok');ok.style.display='block';
+ ok.textContent=`Köszönjük! ${ppl===8?'8+':ppl} főre szóló foglalási kérésed (${d.value}, ${t.value}) megérkezett – hamarosan visszaigazoljuk. (Mintaoldal: valójában nem került elküldésre.)`};
+</script>
+</body>
+</html>

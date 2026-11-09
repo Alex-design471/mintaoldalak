@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Best Of Hair Fodrászat – Időpontfoglalás</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0f0e0d;--bg2:#181614;--ink:#f3ede4;--muted:#a59b8e;--gold:#c9a27e;--line:#2c2824}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:Manrope,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;overflow-x:hidden}
+a{color:inherit}
+.demo{background:var(--gold);color:#111;text-align:center;font-size:12.5px;font-weight:700;padding:6px 16px;letter-spacing:.02em}
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px clamp(16px,4vw,48px);position:sticky;top:0;background:rgba(15,14,13,.85);backdrop-filter:blur(10px);z-index:20;border-bottom:1px solid var(--line)}
+.logo{font-family:"Cormorant Garamond",serif;font-size:1.5rem;font-weight:700;letter-spacing:.04em}.logo i{color:var(--gold);font-weight:500}
+nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0;font-size:.9rem}nav ul a{text-decoration:none;color:var(--muted)}nav ul a:hover{color:var(--gold)}
+@media(max-width:720px){nav ul{display:none}}
+.cta{background:var(--gold);color:#111;text-decoration:none;border:0;border-radius:2px;padding:12px 22px;font:700 14px Manrope;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.cta:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,162,126,.25)}
+.cta.line{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.hero{display:grid;grid-template-columns:1.2fr 1fr;align-items:center;gap:32px;padding:clamp(48px,9vw,110px) clamp(16px,4vw,48px);max-width:1200px;margin:0 auto}
+@media(max-width:820px){.hero{grid-template-columns:1fr}.hero svg{max-width:280px;margin:0 auto}}
+.eyebrow{color:var(--gold);letter-spacing:.3em;text-transform:uppercase;font-size:.75rem;font-weight:700}
+h1{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:clamp(3rem,8vw,6rem);line-height:.95;margin:14px 0 22px}
+h1 em{color:var(--gold)}
+.hero p{color:var(--muted);max-width:460px;margin:0 0 30px}
+.hero .btns{display:flex;gap:12px;flex-wrap:wrap}
+.hero svg{width:100%;height:auto}
+.hero svg .spin{transform-origin:200px 200px;animation:spin 40s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
+.ticker{border-block:1px solid var(--line);overflow:hidden;white-space:nowrap;padding:16px 0;font-family:"Cormorant Garamond",serif;font-size:1.6rem;font-style:italic;color:var(--muted)}
+.ticker div{display:inline-block;animation:tick 30s linear infinite}.ticker span{margin:0 28px}.ticker b{color:var(--gold);font-style:normal}
+@keyframes tick{to{transform:translateX(-50%)}}
+section{max-width:1200px;margin:0 auto;padding:clamp(56px,8vw,100px) clamp(16px,4vw,48px)}
+h2{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:clamp(2.2rem,5vw,3.4rem);margin:8px 0 36px;line-height:1}
+.menu{border-top:1px solid var(--line)}
+.item{display:grid;grid-template-columns:70px 1fr auto;gap:18px;align-items:baseline;padding:26px 0;border-bottom:1px solid var(--line);transition:padding .3s,background .3s;cursor:pointer}
+.item:hover{padding-left:14px;background:linear-gradient(90deg,rgba(201,162,126,.07),transparent)}
+.item .n{font-family:"Cormorant Garamond",serif;color:var(--gold);font-size:1.3rem}
+.item h3{margin:0;font-family:"Cormorant Garamond",serif;font-weight:500;font-size:1.8rem}
+.item p{margin:4px 0 0;color:var(--muted);font-size:.93rem}
+.item .go{color:var(--gold);font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;white-space:nowrap}
+@media(max-width:600px){.item{grid-template-columns:44px 1fr}.item .go{display:none}}
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.why div{background:var(--bg);padding:30px}.why b{display:block;font-family:"Cormorant Garamond",serif;font-size:1.5rem;font-weight:500;margin-bottom:6px}.why p{margin:0;color:var(--muted);font-size:.93rem}
+#foglalas{background:var(--bg2);max-width:none}
+.book{max-width:860px;margin:0 auto}
+.steps{display:flex;gap:8px;margin-bottom:30px}
+.steps span{flex:1;height:3px;background:var(--line);border-radius:3px;transition:background .3s}.steps span.on{background:var(--gold)}
+.pane{display:none;animation:fade .35s}.pane.on{display:block}@keyframes fade{from{opacity:0;transform:translateY(8px)}}
+.pane h3{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:1.7rem;margin:0 0 18px}
+.choices{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+.choice{background:transparent;border:1px solid var(--line);color:var(--ink);text-align:left;padding:18px;border-radius:4px;cursor:pointer;font:inherit;transition:border-color .2s,background .2s}
+.choice small{display:block;color:var(--muted);margin-top:4px}
+.choice:hover{border-color:var(--muted)}.choice.on{border-color:var(--gold);background:rgba(201,162,126,.08)}
+.days{display:flex;gap:10px;overflow-x:auto;padding-bottom:8px;margin-bottom:22px;scrollbar-width:thin}
+.day{flex:0 0 72px;background:transparent;border:1px solid var(--line);color:var(--ink);padding:10px 0;border-radius:4px;cursor:pointer;font:inherit;text-align:center}
+.day small{display:block;color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.1em}.day b{font-size:1.3rem;font-weight:500}
+.day.on{border-color:var(--gold);background:rgba(201,162,126,.1)}.day:disabled{opacity:.3;cursor:not-allowed}
+.slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(82px,1fr));gap:8px}
+.slot{background:transparent;border:1px solid var(--line);color:var(--ink);padding:10px 0;border-radius:4px;cursor:pointer;font:500 14px Manrope}
+.slot.on{background:var(--gold);color:#111;border-color:var(--gold)}.slot:disabled{opacity:.25;text-decoration:line-through;cursor:not-allowed}
+.fields{display:grid;gap:14px;grid-template-columns:1fr 1fr}@media(max-width:600px){.fields{grid-template-columns:1fr}}
+label{display:grid;gap:6px;font-size:.8rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
+input,textarea{font:inherit;font-size:1rem;letter-spacing:0;text-transform:none;color:var(--ink);background:transparent;border:0;border-bottom:1px solid var(--line);padding:10px 0;outline:none}
+input:focus,textarea:focus{border-color:var(--gold)}
+.full{grid-column:1/-1}
+.summary{border:1px dashed var(--line);padding:16px 18px;border-radius:4px;margin:20px 0;color:var(--muted);font-size:.95rem}.summary b{color:var(--ink)}
+.nav{display:flex;justify-content:space-between;margin-top:28px;gap:12px}
+.done{text-align:center;padding:30px 0}.done svg{width:64px;margin-bottom:10px}
+.info{display:grid;grid-template-columns:1fr 1.3fr;gap:36px}@media(max-width:820px){.info{grid-template-columns:1fr}}
+.info dl{margin:0}.info dt{color:var(--gold);font-size:.75rem;letter-spacing:.25em;text-transform:uppercase;margin-top:22px}.info dd{margin:4px 0 0;font-size:1.1rem}
+.hours{width:100%;border-collapse:collapse;margin-top:6px}.hours td{padding:8px 0;border-bottom:1px solid var(--line)}.hours td:last-child{text-align:right}
+.today{color:var(--gold)}
+.ph{background:rgba(201,162,126,.18);padding:0 6px;border-radius:3px;font-size:.85rem}
+iframe{width:100%;height:100%;min-height:340px;border:0;filter:grayscale(1) invert(.92) contrast(.9);border-radius:4px}
+footer{border-top:1px solid var(--line);padding:30px clamp(16px,4vw,48px) 90px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;color:var(--muted);font-size:.85rem}
+.mbar{display:none;position:fixed;inset:auto 0 0;padding:10px 16px;background:rgba(15,14,13,.95);border-top:1px solid var(--line);gap:10px;z-index:30}
+.mbar a{flex:1;text-align:center}@media(max-width:720px){.mbar{display:flex}}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s}.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="demo">MINTAOLDAL – bemutató célra készült, nem a fodrászat hivatalos oldala. A foglalás nem működik élesben.</div>
+<nav>
+  <div class="logo">Best Of <i>Hair</i></div>
+  <ul><li><a href="#szolgaltatasok">Szolgáltatások</a></li><li><a href="#foglalas">Foglalás</a></li><li><a href="#elerhetoseg">Elérhetőség</a></li></ul>
+  <a class="cta" href="#foglalas">Foglalás</a>
+</nav>
+
+<div class="hero">
+  <div>
+    <div class="eyebrow">Fodrászat · Pestszentlőrinc</div>
+    <h1>A frizura,<br>ami <em>Önről</em><br>szól.</h1>
+    <p>Vágás, festés és alkalmi frizura az Üllői úton. Válassza ki a szolgáltatást és az időpontot – telefonálgatás nélkül, akár éjjel is.</p>
+    <div class="btns"><a class="cta" href="#foglalas">Időpontot foglalok</a><a class="cta line" href="tel:+36304887282">06 30 488 7282</a></div>
+  </div>
+  <svg viewBox="0 0 400 400" aria-hidden="true">
+    <g class="spin" fill="none" stroke="#2c2824">
+      <circle cx="200" cy="200" r="190"/><circle cx="200" cy="200" r="150" stroke-dasharray="2 8"/>
+    </g>
+    <text font-family="Manrope" font-size="11" letter-spacing="6" fill="#a59b8e"><textPath href="#c" class="spin">BEST OF HAIR · FODRÁSZAT · BUDAPEST XVIII · BEST OF HAIR · FODRÁSZAT · BUDAPEST XVIII ·</textPath></text>
+    <defs><path id="c" d="M200,200 m-170,0 a170,170 0 1,1 340,0 a170,170 0 1,1 -340,0"/></defs>
+    <g fill="none" stroke="#c9a27e" stroke-width="2.2" stroke-linecap="round">
+      <circle cx="160" cy="260" r="26"/><circle cx="240" cy="260" r="26"/>
+      <path d="M178 240 L262 110"/><path d="M222 240 L138 110"/>
+      <circle cx="200" cy="205" r="4" fill="#c9a27e"/>
+    </g>
+  </svg>
+</div>
+
+<div class="ticker"><div>
+  <span>Női hajvágás</span><b>✦</b><span>Férfi hajvágás</span><b>✦</b><span>Festés</span><b>✦</b><span>Melír</span><b>✦</b><span>Alkalmi frizura</span><b>✦</b><span>Hajápolás</span><b>✦</b>
+  <span>Női hajvágás</span><b>✦</b><span>Férfi hajvágás</span><b>✦</b><span>Festés</span><b>✦</b><span>Melír</span><b>✦</b><span>Alkalmi frizura</span><b>✦</b><span>Hajápolás</span><b>✦</b>
+</div></div>
+
+<section id="szolgaltatasok" class="reveal">
+  <div class="eyebrow">Szolgáltatások</div>
+  <h2>Mit csináljunk ma?</h2>
+  <div class="menu" id="menu"></div>
+</section>
+
+<section class="reveal">
+  <div class="why">
+    <div><b>Foglalás 0–24</b><p>Időpontot bármikor kérhet, akkor is, ha épp nem tudunk telefont felvenni.</p></div>
+    <div><b>Emlékeztető</b><p>A foglalás előtt SMS-ben emlékeztetjük – nem kell fejben tartania.</p></div>
+    <div><b>Könnyen megközelíthető</b><p>Közvetlenül az Üllői úton, Pestszentlőrinc szívében.</p></div>
+  </div>
+</section>
+
+<section id="foglalas">
+  <div class="book reveal">
+    <div class="eyebrow">Online foglalás</div>
+    <h2>Három lépés, és kész.</h2>
+    <div class="steps"><span class="on"></span><span></span><span></span></div>
+
+    <div class="pane on" data-p="1">
+      <h3>1. Melyik szolgáltatás?</h3>
+      <div class="choices" id="svc"></div>
+      <div class="nav"><span></span><button class="cta" id="n1" disabled>Tovább</button></div>
+    </div>
+
+    <div class="pane" data-p="2">
+      <h3>2. Mikor jönne?</h3>
+      <div class="days" id="days"></div>
+      <div class="slots" id="slots"></div>
+      <div class="nav"><button class="cta line" data-back>Vissza</button><button class="cta" id="n2" disabled>Tovább</button></div>
+    </div>
+
+    <form class="pane" data-p="3" id="f">
+      <h3>3. Kinek foglalunk?</h3>
+      <div class="fields">
+        <label>Név<input required autocomplete="name"></label>
+        <label>Telefonszám<input type="tel" required autocomplete="tel"></label>
+        <label class="full">Megjegyzés (nem kötelező)<textarea rows="2" placeholder="pl. hosszú haj, első alkalom"></textarea></label>
+      </div>
+      <div class="summary" id="sum"></div>
+      <div class="nav"><button type="button" class="cta line" data-back>Vissza</button><button class="cta" type="submit">Foglalás elküldése</button></div>
+    </form>
+
+    <div class="pane" data-p="4">
+      <div class="done">
+        <svg viewBox="0 0 64 64" fill="none" stroke="#c9a27e" stroke-width="2.5"><circle cx="32" cy="32" r="29"/><path d="M19 33l9 9 17-19" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>Köszönjük, várjuk!</h3>
+        <p id="doneTxt" style="color:var(--muted)"></p>
+        <p style="color:var(--muted);font-size:.85rem">(Mintaoldal: a foglalás valójában nem került elküldésre.)</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="elerhetoseg" class="reveal">
+  <div class="eyebrow">Elérhetőség</div>
+  <h2>Itt talál minket</h2>
+  <div class="info">
+    <dl>
+      <dt>Cím</dt><dd>1181 Budapest, Üllői út 409.</dd>
+      <dt>Telefon</dt><dd><a href="tel:+36304887282">06 30 488 7282</a></dd>
+      <dt>Nyitvatartás</dt>
+      <dd><table class="hours" id="hours"></table></dd>
+    </dl>
+    <iframe loading="lazy" title="Térkép" src="https://www.google.com/maps?q=1181+Budapest,+%C3%9Cll%C5%91i+%C3%BAt+409.&output=embed"></iframe>
+  </div>
+</section>
+
+<footer><span>© Best Of Hair Fodrászat</span><span>1181 Budapest, Üllői út 409. · 06 30 488 7282</span></footer>
+<div class="mbar"><a class="cta line" href="tel:+36304887282">Hívás</a><a class="cta" href="#foglalas">Foglalás</a></div>
+
+<script>
+const SVC=[
+ ["Női hajvágás","Konzultáció, mosás, vágás és szárítás – rövid és hosszú hajra.","kb. 60 perc"],
+ ["Férfi hajvágás","Klasszikus és modern fazonok, gépi és ollós vágás.","kb. 30 perc"],
+ ["Festés, melír","Tőfestés, teljes festés, melír és színfrissítés.","kb. 120 perc"],
+ ["Alkalmi frizura","Ballagásra, esküvőre, rendezvényre – előzetes egyeztetéssel.","kb. 60 perc"],
+ ["Hajápolás","Pakolás és ápoló kezelés fáradt, igénybe vett hajra.","kb. 30 perc"]];
+const st={svc:null,day:null,time:null};
+const menu=document.getElementById('menu'),svc=document.getElementById('svc');
+SVC.forEach((s,i)=>{
+  const it=document.createElement('div');it.className='item';
+  it.innerHTML=`<span class="n">0${i+1}</span><div><h3>${s[0]}</h3><p>${s[1]}</p></div><span class="go">Foglalás →</span>`;
+  it.onclick=()=>{pickSvc(i);location.hash='foglalas'};menu.appendChild(it);
+  const b=document.createElement('button');b.type='button';b.className='choice';b.innerHTML=`${s[0]}<small>${s[2]}</small>`;
+  b.onclick=()=>pickSvc(i);svc.appendChild(b)});
+function pickSvc(i){st.svc=i;[...svc.children].forEach((c,j)=>c.classList.toggle('on',j===i));document.getElementById('n1').disabled=false}
+function go(p){document.querySelectorAll('.pane').forEach(x=>x.classList.toggle('on',+x.dataset.p===p));
+ document.querySelectorAll('.steps span').forEach((s,i)=>s.classList.toggle('on',i<Math.min(p,3)))}
+document.getElementById('n1').onclick=()=>go(2);
+document.getElementById('n2').onclick=()=>{go(3);
+ document.getElementById('sum').innerHTML=`<b>${SVC[st.svc][0]}</b> · ${fmt(st.day)} · <b>${st.time}</b>`};
+document.querySelectorAll('[data-back]').forEach(b=>b.onclick=()=>go(+b.closest('.pane').dataset.p-1));
+const DN=['V','H','K','Sze','Cs','P','Szo'],MN=['jan.','febr.','márc.','ápr.','máj.','jún.','júl.','aug.','szept.','okt.','nov.','dec.'];
+const fmt=d=>`${MN[d.getMonth()]} ${d.getDate()}. (${DN[d.getDay()]})`;
+const days=document.getElementById('days'),slots=document.getElementById('slots');
+for(let i=0;i<14;i++){const d=new Date();d.setDate(d.getDate()+i);
+ const b=document.createElement('button');b.type='button';b.className='day';b.innerHTML=`<small>${i===0?'Ma':DN[d.getDay()]}</small><b>${d.getDate()}</b>`;
+ if(d.getDay()===0)b.disabled=true;
+ b.onclick=()=>{st.day=d;st.time=null;document.getElementById('n2').disabled=true;[...days.children].forEach(x=>x.classList.remove('on'));b.classList.add('on');renderSlots()};
+ days.appendChild(b)}
+function renderSlots(){slots.innerHTML='';const end=20;
+ for(let h=9;h<end;h++)for(const m of['00','30']){const b=document.createElement('button');b.type='button';b.className='slot';b.textContent=`${h}:${m}`;
+  if((h*3+st.day.getDate()+(m==='30'?1:0))%4===0)b.disabled=true;
+  b.onclick=()=>{st.time=b.textContent;[...slots.children].forEach(x=>x.classList.remove('on'));b.classList.add('on');document.getElementById('n2').disabled=false};
+  slots.appendChild(b)}}
+slots.innerHTML='<p style="color:var(--muted);grid-column:1/-1;margin:0">Válasszon napot a szabad időpontokhoz.</p>';
+document.getElementById('f').onsubmit=e=>{e.preventDefault();
+ document.getElementById('doneTxt').textContent=`${SVC[st.svc][0]} – ${fmt(st.day)}, ${st.time}. Visszaigazolást SMS-ben küldünk.`;go(4)};
+const H=[['Hétfő','9:00–20:00'],['Kedd','9:00–20:00'],['Szerda','9:00–20:00'],['Csütörtök','9:00–20:00'],['Péntek','9:00–20:00'],['Szombat','9:00–20:00'],['Vasárnap','Zárva']];
+const td=(new Date().getDay()+6)%7;
+document.getElementById('hours').innerHTML=H.map((r,i)=>`<tr class="${i===td?'today':''}"><td>${r[0]}${i===td?' · ma':''}</td><td>${r[1]}</td></tr>`).join('');
+const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('in')),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

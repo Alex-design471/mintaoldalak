@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Borka Cukrászda – Tortatervező</title>
+<link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,700;1,700&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff8f1;--ink:#3b2626;--muted:#86696a;--rose:#e2667f;--mint:#9fd8c3;--butter:#ffe29a;--choc:#6b3f2a;--card:#fff;--line:#f3dfd2}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:Nunito,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;overflow-x:hidden}
+.demo{background:var(--ink);color:#fff;text-align:center;font-size:12.5px;padding:6px 16px}
+h1,h2,h3{font-family:"Lobster Two",cursive;margin:0;line-height:1.1}
+.btn{display:inline-block;background:var(--rose);color:#fff;text-decoration:none;border:0;border-radius:999px;padding:14px 28px;font:800 15px Nunito;cursor:pointer;box-shadow:0 5px 0 #b84a61;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(2px);box-shadow:0 3px 0 #b84a61}.btn:active{transform:translateY(5px);box-shadow:none}
+.btn.soft{background:#fff;color:var(--rose);box-shadow:0 5px 0 var(--line)}
+.hero{background:radial-gradient(circle at 15% 20%,#ffd6de 0,transparent 40%),radial-gradient(circle at 85% 30%,#d8f3ea 0,transparent 35%),radial-gradient(circle at 60% 90%,#fff0c4 0,transparent 40%);padding:clamp(40px,7vw,80px) 16px 90px;position:relative}
+.hero .in{position:relative;z-index:1;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.1fr 1fr;gap:30px;align-items:center}
+@media(max-width:800px){.hero .in{grid-template-columns:1fr;text-align:center}.hero svg{max-width:300px;margin:0 auto}}
+.badge{display:inline-block;background:#fff;border:2px dashed var(--rose);color:var(--rose);border-radius:999px;padding:4px 14px;font-weight:800;font-size:.85rem;transform:rotate(-2deg)}
+h1{font-size:clamp(3rem,8vw,5.4rem);color:var(--ink);margin:14px 0}h1 span{color:var(--rose)}
+.hero p{color:var(--muted);font-size:1.1rem;max-width:480px}@media(max-width:800px){.hero p{margin:0 auto 20px}}
+.hero .btns{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px}@media(max-width:800px){.hero .btns{justify-content:center}}
+.flame{transform-box:fill-box;transform-origin:center bottom;animation:flick 1.2s ease-in-out infinite alternate}.flame:nth-of-type(2){animation-delay:.3s}.flame:nth-of-type(3){animation-delay:.6s}
+@keyframes flick{to{transform:scaleY(1.25) rotate(4deg)}}
+.float{animation:bob 4s ease-in-out infinite}@keyframes bob{50%{transform:translateY(-10px)}}
+.wave{display:block;width:100%;height:60px;margin-top:-59px;position:relative}
+section{max-width:1100px;margin:0 auto;padding:clamp(50px,7vw,80px) 16px}
+.center{text-align:center}h2{font-size:clamp(2.3rem,5vw,3.4rem)}h2+p{color:var(--muted);margin:8px auto 34px;max-width:520px}
+.stickers{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:22px}
+.sticker{background:var(--card);border-radius:24px;padding:26px 22px;box-shadow:0 10px 30px rgba(226,102,127,.10);transition:transform .25s;cursor:pointer;border:2px solid transparent}
+.sticker:nth-child(odd){transform:rotate(-1.5deg)}.sticker:nth-child(even){transform:rotate(1.5deg)}
+.sticker:hover{transform:rotate(0) scale(1.04);border-color:var(--rose)}
+.sticker .ic{width:56px;height:56px;border-radius:18px;display:grid;place-items:center;margin-bottom:14px}
+.sticker h3{font-size:1.6rem}.sticker p{margin:6px 0 0;color:var(--muted);font-size:.95rem}
+.planner{background:#fff;border-radius:32px;box-shadow:0 20px 60px rgba(59,38,38,.08);display:grid;grid-template-columns:1fr 1.1fr;overflow:hidden}
+@media(max-width:860px){.planner{grid-template-columns:1fr}}
+.stage{background:linear-gradient(160deg,#ffe8ec,#fff4dc);padding:30px;display:flex;flex-direction:column;align-items:center;justify-content:center;position:sticky;top:0}
+.stage svg{width:100%;max-width:360px}
+.stage .cap{font-weight:800;color:var(--muted);font-size:.9rem;text-align:center}
+.layer{transition:fill .4s}
+.form{padding:clamp(22px,4vw,40px)}
+.q{margin-bottom:24px}.q>b{display:block;margin-bottom:10px;font-weight:800}
+.q>b small{font-weight:600;color:var(--muted)}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pill{border:2px solid var(--line);background:#fff;border-radius:999px;padding:8px 16px;font:700 14px Nunito;color:var(--ink);cursor:pointer;display:flex;align-items:center;gap:8px;transition:all .2s}
+.pill i{width:14px;height:14px;border-radius:50%;display:inline-block}
+.pill:hover{border-color:#e9b9c3}.pill.on{border-color:var(--rose);background:#fff0f3;color:var(--rose)}
+input,textarea,select{font:inherit;width:100%;padding:12px 14px;border:2px solid var(--line);border-radius:14px;background:#fffdfb;outline:none;color:var(--ink)}
+input:focus,textarea:focus{border-color:var(--rose)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}@media(max-width:520px){.two{grid-template-columns:1fr}}
+.hint{color:var(--muted);font-size:.85rem;margin-top:6px}
+.counter{display:flex;align-items:center;gap:12px}.counter button{width:38px;height:38px;border-radius:50%;border:2px solid var(--line);background:#fff;font:800 18px Nunito;cursor:pointer;color:var(--rose)}.counter span{font-weight:800;min-width:24px;text-align:center}
+.recap{background:#fff8f1;border-radius:18px;padding:16px 18px;margin:8px 0 20px;font-size:.95rem}.recap b{color:var(--rose)}
+.ok{display:none;text-align:center;padding:20px}.ok h3{font-size:2rem;color:var(--rose)}
+.how{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;counter-reset:s}
+.how div{position:relative;padding:26px 20px 20px;background:#fff;border-radius:22px;border:2px dashed var(--line)}
+.how div::before{counter-increment:s;content:counter(s);position:absolute;top:-16px;left:20px;width:34px;height:34px;border-radius:50%;background:var(--butter);display:grid;place-items:center;font-weight:800}
+.how b{display:block;margin-bottom:4px}.how p{margin:0;color:var(--muted);font-size:.95rem}
+.contact{display:grid;grid-template-columns:1fr 1.2fr;gap:24px;align-items:stretch}@media(max-width:800px){.contact{grid-template-columns:1fr}}
+.card{background:#fff;border-radius:24px;padding:26px;box-shadow:0 10px 30px rgba(59,38,38,.06)}
+.card h3{font-size:1.4rem;margin-top:16px}.card h3:first-child{margin-top:0}.card p{margin:2px 0 0}
+.hours{width:100%;border-collapse:collapse;margin-top:6px}.hours td{padding:7px 0;border-bottom:1px dotted var(--line)}.hours td:last-child{text-align:right}
+.hours tr.t td{color:var(--rose);font-weight:800}
+.ph{background:#fff0c4;padding:0 6px;border-radius:6px;font-size:.85rem}
+iframe{width:100%;height:100%;min-height:320px;border:0;border-radius:24px}
+footer{background:var(--ink);color:#f3dfd2;text-align:center;padding:34px 16px;font-size:.9rem}
+footer b{font-family:"Lobster Two";font-size:1.6rem;display:block;color:#fff}
+.sprinkles{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.sprinkles i{position:absolute;width:10px;height:4px;border-radius:4px;opacity:.7}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+</head>
+<body>
+<div class="demo">MINTAOLDAL – bemutató célra készült, nem a cukrászda hivatalos oldala. A rendelés nem működik élesben.</div>
+
+<header class="hero">
+  <div class="sprinkles" id="spr"></div>
+  <div class="in">
+    <div>
+      <span class="badge">Pestszentimre · Üllői út 390.</span>
+      <h1>Tervezd meg<br>a <span>tortádat!</span></h1>
+      <p>Válaszd ki az alkalmat, a méretet, az ízt és a díszítést – közben látod, hogyan áll össze. A többit telefonon egyeztetjük.</p>
+      <div class="btns"><a class="btn" href="#tervezo">Indulhat a tervezés</a><a class="btn soft" href="tel:+36703212992">06 70 321 2992</a></div>
+    </div>
+    <svg class="float" viewBox="0 0 320 300" aria-hidden="true">
+      <ellipse cx="160" cy="272" rx="130" ry="14" fill="#f3dfd2"/>
+      <rect x="50" y="170" width="220" height="95" rx="16" fill="#e2667f"/>
+      <path d="M50 186q18 18 36 0t36 0 36 0 36 0 36 0 36 0 34 0v-6a16 16 0 0 0-16-16H66a16 16 0 0 0-16 16z" fill="#fff"/>
+      <rect x="85" y="100" width="150" height="74" rx="14" fill="#ffe29a"/>
+      <path d="M85 114q15 15 30 0t30 0 30 0 30 0 30 0v-4a14 14 0 0 0-14-14H99a14 14 0 0 0-14 14z" fill="#fff"/>
+      <g fill="#9fd8c3"><circle cx="80" cy="230" r="6"/><circle cx="130" cy="245" r="6"/><circle cx="190" cy="230" r="6"/><circle cx="240" cy="245" r="6"/></g>
+      <g><rect x="122" y="58" width="8" height="42" rx="3" fill="#9fd8c3"/><rect x="156" y="52" width="8" height="48" rx="3" fill="#e2667f"/><rect x="190" y="58" width="8" height="42" rx="3" fill="#9fd8c3"/>
+      <path class="flame" d="M126 56c-7-8 0-18 0-18s7 10 0 18z" fill="#ffb347"/><path class="flame" d="M160 50c-7-8 0-18 0-18s7 10 0 18z" fill="#ffb347"/><path class="flame" d="M194 56c-7-8 0-18 0-18s7 10 0 18z" fill="#ffb347"/></g>
+    </svg>
+  </div>
+</header>
+<svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30Q120 0 240 30T480 30 720 30 960 30 1200 30 1440 30V60H0z" fill="#fff8f1"/></svg>
+
+<section class="center">
+  <h2>Minden alkalomra</h2>
+  <p>Kattints egy alkalomra, és a tervező már azzal indul.</p>
+  <div class="stickers" id="occ"></div>
+</section>
+
+<section id="tervezo">
+  <div class="center"><h2>Tortatervező</h2><p>A rajz csak szemléltet – a végső formát és díszítést együtt beszéljük meg.</p></div>
+  <div class="planner">
+    <div class="stage">
+      <svg id="cake" viewBox="0 0 320 320" aria-label="Torta előnézet"></svg>
+      <div class="cap" id="cap">Így néz ki most</div>
+    </div>
+    <form class="form" id="f">
+      <div id="formBody">
+        <div class="q"><b>Alkalom</b><div class="pills" data-k="occ"></div></div>
+        <div class="q"><b>Méret <small>(szelet)</small></b><div class="pills" data-k="size"></div></div>
+        <div class="q"><b>Íz</b><div class="pills" data-k="flav"></div></div>
+        <div class="q"><b>Díszítés a tetején</b><div class="pills" data-k="top"></div></div>
+        <div class="q"><b>Gyertyák</b><div class="counter"><button type="button" id="cm">–</button><span id="cc">3</span><button type="button" id="cp">+</button></div></div>
+        <div class="q"><b>Felirat <small>(nem kötelező)</small></b><input id="txt" maxlength="22" placeholder="pl. Boldog szülinapot, Anna!"></div>
+        <div class="q"><b>Mentesség <small>(ha kell)</small></b><div class="pills" data-k="free" data-multi></div><div class="hint">A megvalósíthatóságot telefonon egyeztetjük.</div></div>
+        <div class="q two">
+          <div><b style="display:block;margin-bottom:10px;font-weight:800">Átvétel napja</b><input type="date" id="d" required><div class="hint">Legkorábban 3 nappal előre.</div></div>
+          <div><b style="display:block;margin-bottom:10px;font-weight:800">Név</b><input required autocomplete="name"></div>
+        </div>
+        <div class="q two">
+          <div><b style="display:block;margin-bottom:10px;font-weight:800">Telefonszám</b><input type="tel" required autocomplete="tel"></div>
+          <div><b style="display:block;margin-bottom:10px;font-weight:800">Megjegyzés</b><input placeholder="színek, egyéb kérés"></div>
+        </div>
+        <div class="recap" id="recap"></div>
+        <button class="btn" type="submit" style="width:100%">Rendelés elküldése</button>
+      </div>
+      <div class="ok" id="ok">
+        <h3>Köszönjük! 🎂</h3>
+        <p id="okTxt"></p>
+        <p class="hint">(Mintaoldal: a rendelés valójában nem került elküldésre.)</p>
+        <button type="button" class="btn soft" onclick="location.reload()">Új torta tervezése</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section class="center">
+  <h2>Így működik</h2><p>Nincs kötelezettség, amíg nem egyeztettünk.</p>
+  <div class="how" style="text-align:left">
+    <div><b>Megtervezed</b><p>Kiválasztod a méretet, ízt, díszítést, és elküldöd a kérést.</p></div>
+    <div><b>Visszahívunk</b><p>Átbeszéljük a részleteket és az árat.</p></div>
+    <div><b>Elkészítjük</b><p>A megbeszélt napra frissen készül el a torta.</p></div>
+    <div><b>Átveszed</b><p>A cukrászdában, az Üllői úton.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="contact">
+    <div class="card">
+      <h3>Cím</h3><p>1184 Budapest, Üllői út 390.</p>
+      <h3>Telefon</h3><p><a href="tel:+36703212992" style="color:var(--rose);font-weight:800">06 70 321 2992</a></p>
+      <h3>Nyitvatartás</h3>
+      <table class="hours" id="hours"></table>
+    </div>
+    <iframe loading="lazy" title="Térkép" src="https://www.google.com/maps?q=1184+Budapest,+%C3%9Cll%C5%91i+%C3%BAt+390.&output=embed"></iframe>
+  </div>
+</section>
+
+<footer><b>Borka Cukrászda</b>1184 Budapest, Üllői út 390. · 06 70 321 2992</footer>
+
+<script>
+const OPT={
+ occ:[["Születésnap"],["Névnap"],["Esküvő / évforduló"],["Gyerekzsúr"],["Céges"],["Egyéb"]],
+ size:[["8–10",1],["12–16",2],["20–25",3],["30+ (egyeztetés)",3]],
+ flav:[["Csokoládés","#6b3f2a"],["Gyümölcsös","#e2667f"],["Vaníliás","#ffe29a"],["Pisztáciás","#9fd8c3"],["Diós","#b98a5a"]],
+ top:[["Friss gyümölcs"],["Csokicsurgatás"],["Színes szórás"],["Letisztult"]],
+ free:[["Gluténmentes"],["Laktózmentes"],["Cukormentes"],["Diómentes"]]};
+const ICON={"Születésnap":"#ffd6de","Névnap":"#d8f3ea","Esküvő / évforduló":"#fff0c4","Gyerekzsúr":"#e6dcff","Céges":"#f3dfd2","Egyéb":"#ffe8ec"};
+const DESC={"Születésnap":"Felirattal, gyertyával, a kedvenc ízzel.","Névnap":"Kisebb méretben, figyelmességnek.","Esküvő / évforduló":"Emeletes torta egyeztetés alapján.","Gyerekzsúr":"Vidám színek, színes szórás.","Céges":"Rendezvényre, irodába, csapatnak.","Egyéb":"Mondd el, mit szeretnél – megoldjuk."};
+const st={occ:0,size:0,flav:0,top:0,free:[],c:3};
+document.querySelectorAll('.pills').forEach(p=>{const k=p.dataset.k,multi=p.hasAttribute('data-multi');
+ OPT[k].forEach((o,i)=>{const b=document.createElement('button');b.type='button';b.className='pill';
+  b.innerHTML=(k==='flav'?`<i style="background:${o[1]}"></i>`:'')+o[0];
+  b.onclick=()=>{if(multi){const j=st.free.indexOf(i);j<0?st.free.push(i):st.free.splice(j,1)}else st[k]=i;sync()};p.appendChild(b)})});
+const occ=document.getElementById('occ');
+OPT.occ.forEach((o,i)=>{const s=document.createElement('div');s.className='sticker';
+ s.innerHTML=`<div class="ic" style="background:${ICON[o[0]]}"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3b2626" stroke-width="2" stroke-linecap="round"><path d="M4 21h16M5 21v-7h14v7M8 14V9h8v5M12 9V5"/></svg></div><h3>${o[0]}</h3><p>${DESC[o[0]]}</p>`;
+ s.onclick=()=>{st.occ=i;if(o[0]==="Gyerekzsúr")st.top=2;sync();document.getElementById('tervezo').scrollIntoView({behavior:'smooth'})};occ.appendChild(s)});
+document.getElementById('cm').onclick=()=>{st.c=Math.max(0,st.c-1);sync()};
+document.getElementById('cp').onclick=()=>{st.c=Math.min(9,st.c+1);sync()};
+const txt=document.getElementById('txt');txt.oninput=sync;
+const d=document.getElementById('d');const m=new Date();m.setDate(m.getDate()+3);d.min=m.toISOString().slice(0,10);d.onchange=()=>{if(d.value&&new Date(d.value).getDay()===0){d.setCustomValidity('Vasárnap zárva vagyunk – kérjük, válasszon másik napot.');d.reportValidity()}else d.setCustomValidity('');sync()};
+function shade(hex,a){const n=parseInt(hex.slice(1),16);let r=(n>>16)+a,g=(n>>8&255)+a,b=(n&255)+a;
+ const c=v=>Math.max(0,Math.min(255,v));return`rgb(${c(r)},${c(g)},${c(b)})`}
+function draw(){const tiers=OPT.size[st.size][1],col=OPT.flav[st.flav][1];let s='';
+ s+=`<ellipse cx="160" cy="292" rx="140" ry="14" fill="#fff" opacity=".8"/><ellipse cx="160" cy="288" rx="128" ry="10" fill="#f3dfd2"/>`;
+ const W=[220,160,110],H=[70,58,48];let y=284,tops=[];
+ for(let t=0;t<tiers;t++){const w=W[t],h=H[t],x=160-w/2;y-=h;
+  s+=`<rect class="layer" x="${x}" y="${y}" width="${w}" height="${h}" rx="12" fill="${col}"/>`;
+  s+=`<rect x="${x}" y="${y+h*.55}" width="${w}" height="5" fill="${shade(col,-25)}" opacity=".5"/>`;
+  const icing=st.top===1?'#4a2a1b':'#fff';let p=`M${x} ${y+12}`;const n=Math.round(w/22);
+  for(let i=0;i<n;i++){const x1=x+(i+.5)*w/n,x2=x+(i+1)*w/n;p+=` Q${x1} ${y+12+(st.top===1?(i%2?16:8):10)} ${x2} ${y+12}`}
+  s+=`<path d="${p} L${x+w} ${y+8} Q${x+w} ${y} ${x+w-12} ${y} L${x+12} ${y} Q${x} ${y} ${x} ${y+8}Z" fill="${icing}"/>`;
+  tops.push([x,y,w])}
+ const [tx,ty,tw]=tops[tops.length-1];
+ if(st.top===0)for(let i=0;i<5;i++){const cx=tx+tw*(i+1)/6;s+=`<circle cx="${cx}" cy="${ty+2}" r="7" fill="${i%2?'#e2667f':'#c73a59'}"/><path d="M${cx} ${ty-5}l3 -5" stroke="#5a9c63" stroke-width="2"/>`}
+ if(st.top===2){const C=['#e2667f','#9fd8c3','#ffe29a','#8fb3ff','#c9a3ff'];for(let t of tops)for(let i=0;i<14;i++){const sx=t[0]+8+((i*37)%(t[2]-16)),sy=t[1]+18+((i*13)%(H[0]-26));
+  s+=`<rect x="${sx}" y="${sy}" width="8" height="3" rx="1.5" fill="${C[i%5]}" transform="rotate(${(i*47)%180} ${sx+4} ${sy+1})"/>`}}
+ for(let i=0;i<st.c;i++){const cx=tx+tw*(i+1)/(st.c+1);
+  s+=`<rect x="${cx-3}" y="${ty-32}" width="6" height="32" rx="2" fill="${i%2?'#9fd8c3':'#e2667f'}"/><path class="flame" style="animation-delay:${i*.15}s" d="M${cx} ${ty-34}c-6-7 0-15 0-15s6 8 0 15z" fill="#ffb347"/>`}
+ const label=txt.value.trim();
+ if(label)s+=`<g><rect x="${160-Math.min(140,label.length*5.4+24)}" y="${284-H[0]+22}" width="${Math.min(280,label.length*10.8+48)}" height="26" rx="13" fill="#fff" opacity=".92"/><text x="160" y="${284-H[0]+40}" text-anchor="middle" font-family="Lobster Two" font-size="17" fill="#3b2626">${label.replace(/[<&>]/g,'')}</text></g>`;
+ document.getElementById('cake').innerHTML=s;
+ document.getElementById('cap').textContent=`${OPT.size[st.size][0]} szelet · ${OPT.flav[st.flav][0].toLowerCase()} · ${OPT.top[st.top][0].toLowerCase()}`}
+function sync(){document.querySelectorAll('.pills').forEach(p=>{const k=p.dataset.k;[...p.children].forEach((b,i)=>b.classList.toggle('on',k==='free'?st.free.includes(i):st[k]===i))});
+ document.getElementById('cc').textContent=st.c;draw();
+ const free=st.free.map(i=>OPT.free[i][0].toLowerCase()).join(', ');
+ document.getElementById('recap').innerHTML=`<b>${OPT.occ[st.occ][0]}</b> torta, <b>${OPT.size[st.size][0]}</b> szelet, <b>${OPT.flav[st.flav][0].toLowerCase()}</b>, ${OPT.top[st.top][0].toLowerCase()} díszítéssel${st.c?`, ${st.c} gyertyával`:''}${txt.value.trim()?`, „${txt.value.trim().replace(/[<&>]/g,'')}” felirattal`:''}${free?` · ${free}`:''}${d.value?` · átvétel: <b>${d.value}</b>`:''}`}
+sync();
+document.getElementById('f').onsubmit=e=>{e.preventDefault();document.getElementById('formBody').style.display='none';
+ document.getElementById('okTxt').textContent=`Megkaptuk a(z) ${d.value} napra kért tortád tervét. Hamarosan visszahívunk az ár és a részletek egyeztetéséhez.`;
+ document.getElementById('ok').style.display='block'};
+const HN=['Hétfő','Kedd','Szerda','Csütörtök','Péntek','Szombat','Vasárnap'],HV=['11:00–18:00','11:00–18:00','11:00–18:00','11:00–18:00','11:00–18:00','10:00–16:00','Zárva'],td=(new Date().getDay()+6)%7;
+document.getElementById('hours').innerHTML=HN.map((n,i)=>`<tr class="${i===td?'t':''}"><td>${n}${i===td?' · ma':''}</td><td>${HV[i]}</td></tr>`).join('');
+const spr=document.getElementById('spr'),SC=['#e2667f','#9fd8c3','#ffe29a','#c9a3ff'];
+for(let i=0;i<26;i++){const e=document.createElement('i');e.style.cssText=`left:${(i*37)%100}%;top:${(i*53)%100}%;background:${SC[i%4]};transform:rotate(${i*41}deg)`;spr.appendChild(e)}
+</script>
+</body>
+</html>
