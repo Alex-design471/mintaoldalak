@@ -5,76 +5,77 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>Suhi Lángos – Debrecen, Jerikó u. 16-20.</title>
+<link rel="preload" as="image" href="frames/d/001.webp" media="(min-width:760px)"><link rel="preload" as="image" href="frames/m/001.webp" media="(max-width:759px)">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#12100e;--bg2:#1b1815;--panel:#211d19;--ink:#f1e7d6;--muted:#9b9183;--ember:#e0582a;--gold:#e3b15f;--rule:#2f2a24}
+:root{--bg:#12100e;--panel:#211d19;--ink:#f1e7d6;--muted:#a69b8b;--ember:#e0582a;--gold:#e3b15f;--rule:#2f2a24}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 16.5px/1.6 "Instrument Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:inherit}
 a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;margin:0;line-height:1}
+img{display:block;max-width:100%}
 .demo{position:relative;z-index:30;background:var(--ink);color:var(--bg);text-align:center;font-size:13px;padding:6px 16px}
 
-/* navigáció */
-nav{position:fixed;top:30px;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:16px clamp(18px,4vw,48px);transition:background .3s,top .3s}
-nav.solid{top:0;background:rgba(18,16,14,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
-.brand{font-family:"Cormorant Garamond";font-size:1.6rem;font-weight:600;letter-spacing:.02em}
+nav{position:fixed;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:16px clamp(18px,4vw,48px);transition:background .3s}
+nav.solid{background:rgba(18,16,14,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
+.brand{font-family:"Cormorant Garamond";font-size:1.6rem;font-weight:600}
 nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0;font-size:.92rem}
-nav ul a{text-decoration:none;color:var(--muted)}nav ul a:hover{color:var(--ink)}
+nav ul a{text-decoration:none;color:#d8ccb9}nav ul a:hover{color:#fff}
 @media(max-width:760px){nav ul{display:none}}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;font:600 15px "Instrument Sans";padding:13px 22px;border-radius:4px;border:1px solid var(--ember);cursor:pointer;transition:background .15s,color .15s}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;font:600 15px "Instrument Sans";padding:13px 22px;border-radius:4px;border:1px solid var(--ember);cursor:pointer;transition:background .15s}
 .btn.solid{background:var(--ember);color:#fff}.btn.solid:hover{background:#ee6a3c}
-.btn.ghost{background:transparent;color:var(--ink);border-color:#4a4239}.btn.ghost:hover{border-color:var(--ink)}
+.btn.ghost{background:rgba(18,16,14,.35);color:var(--ink);border-color:rgba(241,231,214,.4);backdrop-filter:blur(4px)}.btn.ghost:hover{border-color:var(--ink)}
 
-/* ===== HERO: görgetésre szétrepülő lángos ===== */
-.scene{position:relative;height:300vh}
-.stage{position:sticky;top:0;height:100vh;overflow:hidden;
-  background:
-    radial-gradient(ellipse 60% 55% at 64% 58%,rgba(224,88,42,.16),transparent 70%),
-    radial-gradient(ellipse 90% 80% at 50% 50%,#1e1a16 0%,#12100e 70%)}
-.stage::before{content:"";position:absolute;inset:0;opacity:.35;pointer-events:none;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .45 0 0 0 0 .4 0 0 0 .5 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
-#hero{position:absolute;inset:0;width:100%;height:100%}
-.copy{position:absolute;left:clamp(18px,6vw,96px);bottom:clamp(40px,12vh,130px);max-width:min(520px,86vw);z-index:2}
-.copy small{display:block;color:var(--gold);font-size:.9rem;margin-bottom:14px;letter-spacing:.04em}
-.copy h1{font-size:clamp(3.4rem,9vw,7.2rem);letter-spacing:-.01em;line-height:.92}
-.copy h1 i{display:block;font-style:italic;font-weight:500;color:var(--muted);font-size:.5em;margin-top:10px;letter-spacing:0}
-.copy p{color:var(--muted);max-width:40ch;margin:20px 0 26px}
+/* ===== HERO: görgetéssel vezérelt videó (képkockák) ===== */
+.scene{position:relative;height:420vh}
+.stage{position:sticky;top:0;height:100vh;overflow:hidden;background:#1a1410}
+#film{position:absolute;inset:0;width:100%;height:100%;display:block}
+.shade{position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(90deg,rgba(14,11,9,.88) 0%,rgba(14,11,9,.55) 34%,rgba(14,11,9,0) 62%),
+             linear-gradient(0deg,rgba(14,11,9,.7) 0%,rgba(14,11,9,0) 30%),
+             linear-gradient(180deg,rgba(14,11,9,.55) 0%,rgba(14,11,9,0) 18%)}
+.copy{position:absolute;left:clamp(18px,6vw,96px);bottom:clamp(40px,12vh,130px);max-width:min(540px,88vw);z-index:2}
+.copy small{display:block;color:var(--gold);font-size:.92rem;margin-bottom:14px}
+.copy h1{font-size:clamp(3.4rem,9vw,7.2rem);letter-spacing:-.01em;line-height:.92;text-shadow:0 2px 30px rgba(0,0,0,.4)}
+.copy h1 i{display:block;font-style:italic;color:#d8ccb9;font-size:.5em;margin-top:10px}
+.copy p{color:#d8ccb9;max-width:40ch;margin:20px 0 26px}
 .copy .actions{display:flex;gap:12px;flex-wrap:wrap}
-.caption{position:absolute;right:clamp(18px,5vw,72px);top:22vh;text-align:right;z-index:2;max-width:260px}
-.caption div{position:absolute;right:0;top:0;width:260px;opacity:0;transform:translateY(14px);transition:opacity .5s,transform .5s}
+.caption{position:absolute;right:clamp(18px,5vw,72px);bottom:clamp(40px,12vh,130px);text-align:right;z-index:2;width:280px;height:80px}
+.caption div{position:absolute;right:0;bottom:0;width:280px;opacity:0;transform:translateY(14px);transition:opacity .5s,transform .5s}
 .caption div.on{opacity:1;transform:none}
-.caption b{display:block;font-family:"Cormorant Garamond";font-size:1.7rem;font-weight:500;color:var(--ink)}
-.caption span{color:var(--muted);font-size:.92rem}
-.scrollhint{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);color:var(--muted);font-size:.8rem;z-index:2;transition:opacity .4s}
-.scrollhint::after{content:"";display:block;width:1px;height:34px;margin:8px auto 0;background:linear-gradient(var(--muted),transparent);animation:drip 1.8s ease-in-out infinite}
+.caption b{display:block;font-family:"Cormorant Garamond";font-size:1.8rem;font-weight:500;text-shadow:0 2px 20px rgba(0,0,0,.6)}
+.caption span{color:#e6dccb;font-size:.92rem;text-shadow:0 1px 10px rgba(0,0,0,.7)}
+.scrollhint{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);color:#d8ccb9;font-size:.8rem;z-index:2;transition:opacity .4s}
+.scrollhint::after{content:"";display:block;width:1px;height:34px;margin:8px auto 0;background:linear-gradient(#d8ccb9,transparent);animation:drip 1.8s ease-in-out infinite}
 @keyframes drip{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
-@media(max-width:760px){.caption{display:none}.copy{bottom:96px}}
+@media(max-width:760px){
+  .caption{display:none}.copy{bottom:96px}
+  .shade{background:linear-gradient(0deg,rgba(14,11,9,.92) 0%,rgba(14,11,9,.6) 45%,rgba(14,11,9,.1) 75%),linear-gradient(180deg,rgba(14,11,9,.5) 0%,rgba(14,11,9,0) 18%)}
+}
 
-/* ===== általános szakaszok ===== */
+/* ===== szakaszok ===== */
 .wrap{max-width:1180px;margin:0 auto;padding:0 clamp(18px,4vw,40px)}
-section.block{padding:clamp(72px,10vw,130px) 0;position:relative}
+section.block{padding:clamp(72px,10vw,130px) 0}
 .sh{display:flex;align-items:baseline;gap:18px;margin-bottom:clamp(30px,5vw,56px);flex-wrap:wrap}
 .sh .no{font-family:"Cormorant Garamond";font-style:italic;color:var(--ember);font-size:1.6rem}
 .sh h2{font-size:clamp(2.4rem,5.4vw,4rem)}
 .sh p{flex:0 0 100%;color:var(--muted);max-width:52ch;margin:6px 0 0}
 
-/* kínálat kártyák */
 .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
 @media(max-width:1000px){.cards{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:520px){.cards{grid-template-columns:1fr}}
 .card{background:var(--panel);border:1px solid var(--rule);border-radius:6px;overflow:hidden;transition:transform .35s cubic-bezier(.2,.7,.2,1),border-color .35s}
 .card:hover{transform:translateY(-6px);border-color:#4a4239}
-.card .pic{aspect-ratio:1;background:radial-gradient(circle at 50% 55%,#2b2520,#171411 72%);display:grid;place-items:center;position:relative}
-.card .pic svg{width:82%;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
-.card:hover .pic svg{transform:rotate(14deg) scale(1.04)}
+.card .pic{aspect-ratio:4/3;position:relative;overflow:hidden;background:#1a1410}
+.card .pic img{width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+.card:hover .pic img{transform:scale(1.07)}
 .card .pic em{position:absolute;top:12px;left:12px;font-style:normal;background:var(--ember);color:#fff;font-size:.75rem;font-weight:600;padding:3px 9px;border-radius:2px}
 .card .txt{padding:18px 18px 22px}
 .card h3{font-size:1.6rem}
 .card p{color:var(--muted);font-size:.93rem;margin:6px 0 0}
 
-/* összerakó */
 .build{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(24px,4vw,56px);align-items:center}
 @media(max-width:900px){.build{grid-template-columns:1fr}}
 .step{margin-bottom:26px}
@@ -88,17 +89,19 @@ section.block{padding:clamp(72px,10vw,130px) 0;position:relative}
 .qty{display:flex;align-items:center;gap:14px}
 .qty button{width:42px;height:42px;border-radius:4px;border:1px solid #4a4239;background:var(--panel);color:var(--ink);font:500 20px "Instrument Sans";cursor:pointer}
 .qty output{font-family:"Cormorant Garamond";font-size:2rem;min-width:28px;text-align:center}
-.plate{position:relative;aspect-ratio:1;border-radius:6px;background:radial-gradient(circle at 50% 55%,#2a2420,#14110f 70%);border:1px solid var(--rule);display:grid;place-items:center;overflow:hidden}
-.plate svg{width:80%;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
-.plate .tag{position:absolute;left:18px;bottom:16px;right:18px;display:flex;justify-content:space-between;align-items:end;gap:12px}
+.plate{position:relative;aspect-ratio:4/3;border-radius:6px;overflow:hidden;border:1px solid var(--rule);background:#1a1410}
+.plate img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .6s ease,transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.plate img.b{opacity:0}
+.plate.top img.a{opacity:0}.plate.top img.b{opacity:1}
+.plate.bump img{transform:scale(1.05)}
+.plate .tag{position:absolute;left:0;right:0;bottom:0;padding:40px 18px 16px;display:flex;justify-content:space-between;align-items:end;gap:12px;background:linear-gradient(0deg,rgba(14,11,9,.85),transparent)}
 .plate .tag b{font-family:"Cormorant Garamond";font-size:1.5rem;font-weight:500}
-.plate .tag span{color:var(--muted);font-size:.85rem;text-align:right}
+.plate .tag span{color:#d8ccb9;font-size:.85rem;text-align:right}
 .say{margin-top:18px;background:var(--panel);border-left:2px solid var(--ember);padding:16px 18px;border-radius:0 4px 4px 0}
 .say small{color:var(--muted);display:block;margin-bottom:4px}
 .say q{font-family:"Cormorant Garamond";font-size:1.35rem;line-height:1.35;quotes:"„" "”"}
 .say .btn{margin-top:14px;width:100%}
 
-/* futó sáv */
 .ticker{border-block:1px solid var(--rule);overflow:hidden;white-space:nowrap;padding:22px 0;font-family:"Cormorant Garamond";font-style:italic;font-size:clamp(1.4rem,2.6vw,2rem);color:var(--muted)}
 .ticker div{display:inline-block;animation:tk 34s linear infinite}
 .ticker span{margin:0 26px}.ticker b{color:var(--ember);font-style:normal}
@@ -108,7 +111,6 @@ section.block{padding:clamp(72px,10vw,130px) 0;position:relative}
 .stats b{display:block;font-family:"Cormorant Garamond";font-size:clamp(2.6rem,5vw,3.8rem);font-weight:500;line-height:1}
 .stats span{color:var(--muted);font-size:.88rem}
 
-/* hol */
 .where{display:grid;grid-template-columns:1fr 1.25fr;gap:clamp(24px,4vw,48px)}
 @media(max-width:900px){.where{grid-template-columns:1fr}}
 .addr{font-family:"Cormorant Garamond";font-size:2rem;line-height:1.2;margin:0 0 22px}
@@ -120,22 +122,21 @@ section.block{padding:clamp(72px,10vw,130px) 0;position:relative}
 .hours td:last-child{text-align:right;color:var(--muted)}
 .hours tr.now td{color:var(--gold)}
 iframe{width:100%;height:100%;min-height:380px;border:0;border-radius:6px;filter:grayscale(.6) invert(.9) contrast(.85)}
-footer{border-top:1px solid var(--rule);padding:30px 0 100px;color:var(--muted);font-size:.92rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+footer{border-top:1px solid var(--rule);margin-top:clamp(56px,8vw,96px);padding:30px 0 100px;color:var(--muted);font-size:.92rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 .mbar{display:none;position:fixed;inset:auto 0 0;padding:10px 16px;background:rgba(18,16,14,.96);border-top:1px solid var(--rule);z-index:25}
 .mbar .btn{width:100%}
 @media(max-width:760px){.mbar{display:block}}
 
-/* beúszás */
 .rv{opacity:0;transform:translateY(34px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
 .rv.in{opacity:1;transform:none}
-.split .w{display:inline-block;overflow:hidden;vertical-align:top}
-.split .w>span{display:inline-block;transform:translateY(105%);transition:transform .9s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.split .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.08em}
+.split .w>span{display:inline-block;transform:translateY(110%);transition:transform .9s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
 .split.in .w>span{transform:none}
 
 @media(prefers-reduced-motion:reduce){
   .rv,.split .w>span{opacity:1;transform:none;transition:none}
   .ticker div,.scrollhint::after{animation:none}
-  .scene{height:auto}.stage{position:relative}
+  .scene{height:100vh}
 }
 </style>
 </head>
@@ -148,38 +149,36 @@ footer{border-top:1px solid var(--rule);padding:30px 0 100px;color:var(--muted);
   <a class="btn solid" href="tel:+36203543736">Hívás</a>
 </nav>
 
-<!-- 1. HERO -->
 <section class="scene" id="scene">
   <div class="stage">
-    <svg id="hero" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice" aria-hidden="true"></svg>
-    <div class="caption" aria-hidden="true">
-      <div data-from="0" data-to=".3"><b>Kelt tészta</b><span>Élesztővel, ahogy régen.</span></div>
-      <div data-from=".3" data-to=".62"><b>Tejföl, sajt, fokhagyma</b><span>Bőven, a pultnál rakjuk rá.</span></div>
-      <div data-from=".62" data-to="1.1"><b>Frissen sütve</b><span>Akkor készül, amikor kéred.</span></div>
-    </div>
+    <canvas id="film" role="img" aria-label="Lángos, amelyre tejföl és reszelt sajt hullik"></canvas>
+    <div class="shade"></div>
     <div class="copy">
       <small>Debrecen, Jerikó u. 16-20.</small>
-      <h1 class="split" id="h1">Suhi Lángos<i>élesztős, frissen sütve</i></h1>
+      <h1 class="split">Suhi Lángos<i>élesztős, frissen sütve</i></h1>
       <p class="rv" style="--d:.5s">Telefonálj előre, és mire odaérsz, már csomagolva vár a lángosod.</p>
       <div class="actions rv" style="--d:.65s">
         <a class="btn solid" href="tel:+36203543736">Hívás és előrendelés</a>
         <a class="btn ghost" href="#kinalat">Kínálat</a>
       </div>
     </div>
+    <div class="caption" aria-hidden="true">
+      <div data-from=".02" data-to=".36"><b>Aranybarnára sütve</b><span>Kelt tésztából, ahogy régen.</span></div>
+      <div data-from=".36" data-to=".78"><b>Jöhet rá a tejföl és a sajt</b><span>Bőven, a pultnál rakjuk rá.</span></div>
+      <div data-from=".78" data-to="1.1"><b>Így kérik a legtöbben</b><span>Sajtos-tejfölös, frissen.</span></div>
+    </div>
     <div class="scrollhint" id="hint">Görgess</div>
   </div>
 </section>
 
-<!-- 2. KÍNÁLAT -->
 <section class="block" id="kinalat">
   <div class="wrap">
     <div class="sh"><span class="no rv">01</span><h2 class="split">Amit sütünk</h2><p class="rv" style="--d:.2s">Egyszerű kínálat, jól megcsinálva. A klasszikusok mindig vannak.</p></div>
     <div class="cards" id="cards"></div>
-    <p class="rv" style="color:var(--muted);font-size:.88rem;margin-top:22px">Az árakat és a teljes kínálatot a végleges oldalon a lángosozó saját listája alapján tüntetjük fel.</p>
+    <p class="rv" style="color:var(--muted);font-size:.88rem;margin-top:22px">Az árakat és a teljes kínálatot a végleges oldalon a lángosozó saját listája és fotói alapján tüntetjük fel.</p>
   </div>
 </section>
 
-<!-- 3. ÖSSZERAKÓ -->
 <section class="block" id="osszerako">
   <div class="wrap">
     <div class="sh"><span class="no rv">02</span><h2 class="split">Rakd össze a sajátod</h2><p class="rv" style="--d:.2s">Válaszd ki a feltéteket és a darabszámot. Az oldal összeállítja, mit mondj a telefonba.</p></div>
@@ -189,12 +188,15 @@ footer{border-top:1px solid var(--rule);padding:30px 0 100px;color:var(--muted);
         <div class="step"><b>Darabszám</b><div class="qty"><button type="button" id="minus" aria-label="Eggyel kevesebb">−</button><output id="cnt">1</output><button type="button" id="plus" aria-label="Eggyel több">+</button></div></div>
         <div class="say"><small>Ezt mondd a telefonba:</small><q id="say"></q><a class="btn solid" href="tel:+36203543736">Hívás: 06 20 354 3736</a></div>
       </div>
-      <div class="plate rv" style="--d:.15s"><svg id="buildSvg" viewBox="0 0 600 600"></svg><div class="tag"><b id="bname">Sima lángos</b><span id="bcount">1 db, elvitelre</span></div></div>
+      <div class="plate rv" id="plate" style="--d:.15s">
+        <img class="a" src="img/v-sima.jpg" alt="" loading="lazy">
+        <img class="b" src="img/v-sajtos.jpg" alt="" loading="lazy">
+        <div class="tag"><b id="bname">Sima lángos</b><span id="bcount">1 db, elvitelre</span></div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- 4. SZÁMOK -->
 <div class="ticker" aria-hidden="true"><div>
   <span>Kelt tészta</span><b>✦</b><span>Frissen sütve</span><b>✦</b><span>Fokhagyma, tejföl, sajt</span><b>✦</b><span>Jerikó utca</span><b>✦</b><span>Debrecen</span><b>✦</b>
   <span>Kelt tészta</span><b>✦</b><span>Frissen sütve</span><b>✦</b><span>Fokhagyma, tejföl, sajt</span><b>✦</b><span>Jerikó utca</span><b>✦</b><span>Debrecen</span><b>✦</b>
@@ -203,10 +205,9 @@ footer{border-top:1px solid var(--rule);padding:30px 0 100px;color:var(--muted);
   <div class="rv"><b data-count="4.9" data-dec="1">0</b><span>Google-értékelés</span></div>
   <div class="rv" style="--d:.1s"><b data-count="192">0</b><span>vélemény</span></div>
   <div class="rv" style="--d:.2s"><b>9–19</b><span>keddtől péntekig</span></div>
-  <div class="rv" style="--d:.3s"><b>5 perc</b><span>és kész a lángos</span></div>
+  <div class="rv" style="--d:.3s"><b>Elvitelre</b><span>útközben, otthon, munkahelyen</span></div>
 </div></div>
 
-<!-- 5. HOL -->
 <section class="block" id="hol">
   <div class="wrap">
     <div class="sh"><span class="no rv">03</span><h2 class="split">Hol és mikor</h2></div>
@@ -224,142 +225,75 @@ footer{border-top:1px solid var(--rule);padding:30px 0 100px;color:var(--muted);
 <div class="mbar"><a class="btn solid" href="tel:+36203543736">Hívás és előrendelés</a></div>
 
 <script>
-/* ===================== közös lángos-rajzoló (saját vektorrajz) ===================== */
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const NS='http://www.w3.org/2000/svg';
-let uid=0;
+const ease=t=>t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2;
+const clamp=(v,a=0,b=1)=>Math.min(b,Math.max(a,v));
 function rng(seed){let s=seed;return()=>((s=(s*9301+49297)%233280)/233280)}
-function el(tag,attrs,parent){const e=document.createElementNS(NS,tag);for(const k in attrs)e.setAttribute(k,attrs[k]);if(parent)parent.appendChild(e);return e}
-const DOUGH='M300 38c86 0 168 42 212 110 42 66 50 158 12 228-38 72-120 128-206 146-88 18-182-6-240-66C20 396 6 300 36 216 70 120 176 38 300 38z';
-const CREAM='M300 150c70-6 140 30 160 92 18 58-4 128-58 160-52 32-136 40-190 6-54-34-80-104-58-164 20-56 78-90 146-94z';
-function defs(svg){
-  const id=++uid,d=el('defs',{},svg);
-  d.innerHTML=`
-  <radialGradient id="gd${id}" cx="46%" cy="42%" r="62%"><stop offset="0" stop-color="#f6d389"/><stop offset=".55" stop-color="#e9b45a"/><stop offset=".85" stop-color="#cf8f37"/><stop offset="1" stop-color="#a86a24"/></radialGradient>
-  <radialGradient id="gr${id}" cx="50%" cy="50%" r="50%"><stop offset=".78" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#6e3f12" stop-opacity=".6"/></radialGradient>
-  <radialGradient id="gb${id}" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#f9dc9b"/><stop offset=".6" stop-color="#d79a45"/><stop offset="1" stop-color="#9b5f1f"/></radialGradient>
-  <radialGradient id="gc${id}" cx="45%" cy="40%" r="60%"><stop offset="0" stop-color="#fffdf7"/><stop offset=".8" stop-color="#f5efe2"/><stop offset="1" stop-color="#e3d6bc"/></radialGradient>
-  <filter id="ft${id}" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="4" result="n"/><feColorMatrix in="n" type="matrix" values="0 0 0 0 .35 0 0 0 0 .2 0 0 0 0 .05 0 0 0 .5 0"/><feComposite in2="SourceGraphic" operator="in"/></filter>
-  <filter id="fs${id}" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="2.2"/></filter>
-  <filter id="sh${id}" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#000" flood-opacity=".55"/></filter>
-  <clipPath id="cd${id}"><path d="${DOUGH}"/></clipPath>`;
-  return id;
-}
-function dough(svg,id,parent){
-  const g=el('g',{filter:`url(#sh${id})`},parent||svg);
-  el('path',{d:DOUGH,fill:`url(#gd${id})`},g);
-  const c=el('g',{'clip-path':`url(#cd${id})`},g);
-  el('rect',{width:600,height:600,filter:`url(#ft${id})`,opacity:.55},c);
-  el('path',{d:DOUGH,fill:`url(#gr${id})`},c);
-  [[128,210,34,24,-20],[470,190,28,20,0],[505,350,30,22,30],[190,480,38,24,12],[380,505,26,18,0],[90,350,22,30,0],[300,80,30,16,0]]
-    .forEach(([x,y,rx,ry,r])=>el('ellipse',{cx:x,cy:y,rx,ry,fill:`url(#gb${id})`,transform:`rotate(${r} ${x} ${y})`},c));
-  [[150,140,5],[440,120,4],[540,270,5],[110,420,4],[300,555,5],[460,460,4]].forEach(([x,y,r])=>el('circle',{cx:x,cy:y,r,fill:'#8a4f18',opacity:.55},c));
-  return g;
-}
-function cream(svg,id,parent){
-  const g=el('g',{},parent||svg);
-  el('path',{d:CREAM,fill:`url(#gc${id})`},g);
-  el('path',{d:CREAM,fill:'none',stroke:'#fff','stroke-width':10,opacity:.5,filter:`url(#fs${id})`},g);
-  return g;
-}
-const CHEESE=['#f7cf3a','#f2b928','#fbe07a','#eaa91c'];
-function cheeseBits(seed,n){const r=rng(seed),out=[];for(let i=0;i<n;i++){const a=r()*Math.PI*2,d=Math.sqrt(r())*150;out.push({x:300+Math.cos(a)*d*1.05,y:278+Math.sin(a)*d*.95,len:14+r()*16,ang:r()*180,bend:-4+r()*8,c:CHEESE[i%4],vx:(r()-.5)*2,vy:-.4-r()*1.2,vr:(r()-.5)*720})}return out}
-function garlicBits(seed,n,radius){const r=rng(seed),out=[];for(let i=0;i<n;i++){const a=r()*Math.PI*2,d=Math.sqrt(r())*radius;out.push({x:300+Math.cos(a)*d,y:300+Math.sin(a)*d*.92,rx:2+r()*2.5,ry:1.5+r()*1.8,vx:(r()-.5)*2.4,vy:-.6-r()*1.4})}return out}
-function drawCheese(parent,bits){return bits.map(b=>{const g=el('g',{},parent);
-  el('path',{d:`M0 0q${b.len/2} ${b.bend} ${b.len} 0`,stroke:'#b77a10','stroke-width':5,opacity:.25,fill:'none','stroke-linecap':'round',transform:'translate(1 2)'},g);
-  el('path',{d:`M0 0q${b.len/2} ${b.bend} ${b.len} 0`,stroke:b.c,'stroke-width':4,fill:'none','stroke-linecap':'round'},g);
-  g.setAttribute('transform',`translate(${b.x} ${b.y}) rotate(${b.ang})`);return g})}
-function drawGarlic(parent,bits){return bits.map(b=>el('ellipse',{cx:b.x,cy:b.y,rx:b.rx,ry:b.ry,fill:'#fbf6e6',stroke:'#d8c79a','stroke-width':.8},parent))}
-function langos(svg,{tejfol,sajt,fok},seed=11){
-  svg.innerHTML='';const id=defs(svg);dough(svg,id);
-  if(fok&&!tejfol)drawGarlic(el('g',{},svg),garlicBits(seed+3,40,200));
-  if(tejfol)cream(svg,id);
-  if(sajt)drawCheese(el('g',{},svg),cheeseBits(seed,tejfol?110:140));
-  if(fok&&tejfol)drawGarlic(el('g',{},svg),garlicBits(seed+3,46,230));
-}
 
-/* ===================== HERO: görgetésre szétválnak a rétegek ===================== */
+/* ===== HERO: a videó képkockái a görgetéshez kötve ===== */
 (function(){
-  const svg=document.getElementById('hero'),id=defs(svg);
-  // a lángos a jobb oldalon, kicsit megdöntve
-  const root=el('g',{},svg);
-  const place=el('g',{},root);           // ide jön a teljes lángos
-  const dg=dough(svg,id,place);
-  const strings=el('g',{fill:'none','stroke-linecap':'round'},place);
-  const cg=el('g',{},place);const cr=cream(svg,id,cg);
-  const chG=el('g',{},place),gaG=el('g',{},place);
-  const cb=cheeseBits(11,110),gb=garlicBits(14,46,230);
-  const chEls=drawCheese(chG,cb),gaEls=drawGarlic(gaG,gb);
-  // sajtszálak: a tészta és a felemelkedő tejföl között
-  const sr=rng(5),S=[];for(let i=0;i<14;i++){const a=Math.PI*(1.05+sr()*.9),rad=90+sr()*60;S.push({x:300+Math.cos(a)*rad,y:300+Math.sin(a)*rad*.7+30,w:2+sr()*4,c:CHEESE[i%4],k:.6+sr()*.6})}
-  const sEls=S.map(s=>el('path',{stroke:s.c,'stroke-width':s.w,opacity:.95},strings));
-  // gőz
-  const steam=el('g',{fill:'none',stroke:'#cbbfae','stroke-width':3,'stroke-linecap':'round',opacity:0},place);
-  [[250,40],[300,20],[350,40]].forEach(([x,y])=>el('path',{d:`M${x} ${y}q-12-24 0-48t0-48`},steam));
-
-  const demoH=document.querySelector('.demo').offsetHeight;const scene=document.getElementById('scene'),caps=[...document.querySelectorAll('.caption div')],hint=document.getElementById('hint'),nav=document.getElementById('nav');
-  let W=1600,H=1000;
-  function layout(){
-    const vw=innerWidth,vh=innerHeight,mobile=vw<760;
-    // a viewBox "slice" módban kitölti a képet; a lángos méretét és helyét a képernyőhöz igazítjuk
-    const scale=mobile?.62:1.02, cx=mobile?800:1080, cy=mobile?330:560;
-    place.setAttribute('transform',`translate(${cx-300*scale} ${cy-300*scale}) scale(${scale})`);
+  const scene=document.getElementById('scene'),cv=document.getElementById('film'),ctx=cv.getContext('2d'),
+        caps=[...document.querySelectorAll('.caption div')],hint=document.getElementById('hint'),
+        nav=document.getElementById('nav'),demo=document.querySelector('.demo');
+  const N=120,FW=16,FH=9;
+  const set=()=>innerWidth<760?'m':'d';
+  let cur=set(),frames=[],shown=-1,target=0,pos=0;
+  const src=(k,i)=>`frames/${k}/${String(i+1).padStart(3,'0')}.webp`;
+  function load(k){
+    frames=new Array(N);
+    // előbb minden 8., aztán minden 2., végül a többi: gyorsan használható, majd egyre finomabb
+    const order=[];for(const step of [8,4,2,1])for(let i=0;i<N;i+=step)if(!order.includes(i))order.push(i);
+    let n=0;const next=()=>{if(n>=order.length)return;const i=order[n++],im=new Image();im.decoding='async';
+      im.onload=()=>{frames[i]=im;if(i===0||Math.abs(i-Math.round(pos))<3)draw(true);next()};im.onerror=next;im.src=src(k,i)};
+    for(let c=0;c<6;c++)next();
   }
-  const ease=t=>t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2;
+  function nearest(i){if(frames[i])return frames[i];for(let d=1;d<N;d++){if(frames[i-d])return frames[i-d];if(frames[i+d])return frames[i+d]}return null}
+  function size(){const r=Math.min(devicePixelRatio||1,2);cv.width=Math.round(innerWidth*r);cv.height=Math.round(innerHeight*r);shown=-1;draw(true)}
+  function draw(force){
+    const i=Math.round(pos);if(!force&&i===shown)return;const im=nearest(i);if(!im)return;shown=i;
+    const W=cv.width,H=cv.height,mobile=innerWidth<760;
+    let w,h,x,y;
+    if(mobile){w=W*1.75;h=w*FH/FW;x=W*.5-w*.56;y=H*.08}
+    else{const sc=Math.max(W/FW,H/FH)*1.06;w=FW*sc;h=FH*sc;x=W*.6-w*.56;y=H*.54-h*.55;x=Math.min(0,Math.max(W-w,x));y=Math.min(0,Math.max(H-h,y))}
+    ctx.fillStyle='#14100c';ctx.fillRect(0,0,W,H);ctx.drawImage(im,x,y,w,h);
+  }
   let ticking=false;
-  function frame(){
-    ticking=false;
-    const total=scene.offsetHeight-innerHeight;
-    const p=Math.min(1,Math.max(0,(scrollY-scene.offsetTop)/Math.max(1,total)));
-    const e=ease(p);
-    // tészta lassan forog és kicsit hátrébb kerül
-    root.setAttribute('transform',`rotate(${-8+p*14} ${innerWidth<760?800:1080} ${innerWidth<760?330:560})`);
-    dg.setAttribute('transform',`translate(0 ${e*40})`);
-    // tejföl felemelkedik
-    const lift=e*(innerWidth<760?-170:-210);
-    cg.setAttribute('transform',`translate(0 ${lift}) rotate(${e*-10} 300 280)`);
-    // sajt és fokhagyma szétrepül
-    cb.forEach((b,i)=>{const t=Math.max(0,Math.min(1,(p-.08-i*.0015)/.8)),te=ease(t);
-      chEls[i].setAttribute('transform',`translate(${b.x+b.vx*te*260} ${b.y+lift*.85+b.vy*te*320}) rotate(${b.ang+b.vr*te})`)});
-    gb.forEach((b,i)=>{const t=Math.max(0,Math.min(1,(p-.12)/.8)),te=ease(t);
-      gaEls[i].setAttribute('transform',`translate(${b.vx*te*300} ${lift*.6+b.vy*te*340})`)});
-    // sajtszálak nyúlnak, majd elszakadnak
-    const sOp=p<.7?1:Math.max(0,1-(p-.7)/.15);
-    S.forEach((s,i)=>{const top=s.y+lift*s.k,mid=(s.y+top)/2,sag=12+Math.abs(lift)*.08;
-      sEls[i].setAttribute('d',`M${s.x} ${s.y}C${s.x-sag} ${mid+20} ${s.x+sag} ${mid-20} ${s.x} ${top}`);
-      sEls[i].setAttribute('opacity',(Math.abs(lift)>8?sOp:0)*.95);
-      sEls[i].setAttribute('stroke-width',Math.max(.6,s.w*(1-e*.6)))});
-    steam.setAttribute('opacity',Math.min(.5,p*1.5));
-    steam.setAttribute('transform',`translate(0 ${lift-40-p*60})`);
-    // feliratok
-    caps.forEach(c=>c.classList.toggle('on',p>=+c.dataset.from&&p<+c.dataset.to&&p>.02));
+  function onScroll(){
+    const total=scene.offsetHeight-innerHeight,p=reduce?0:clamp((scrollY-scene.offsetTop)/Math.max(1,total));
+    // az első 6% és az utolsó 10% "kitartás": előbb látszik a sima lángos, a végén kicsit marad a kész
+    target=clamp((p-.06)/.84)*(N-1);
+    caps.forEach(c=>c.classList.toggle('on',p>=+c.dataset.from&&p<+c.dataset.to));
     hint.style.opacity=p>.03?0:1;
-    const solid=scrollY>innerHeight*.6;nav.classList.toggle('solid',solid);nav.style.top=solid?'0px':Math.max(0,demoH-scrollY)+'px';
+    const solid=scrollY>innerHeight*.6;nav.classList.toggle('solid',solid);
+    nav.style.top=solid?'0px':Math.max(0,demo.offsetHeight-scrollY)+'px';
+    if(!ticking){ticking=true;requestAnimationFrame(tick)}
   }
-  const req=()=>{if(!ticking){ticking=true;requestAnimationFrame(frame)}};
-  addEventListener('scroll',req,{passive:true});
-  addEventListener('resize',()=>{layout();req()});
-  layout();frame();
+  // kis csillapítás, hogy a görgetés selymes legyen, ne darabos
+  function tick(){pos+=(target-pos)*.22;if(Math.abs(target-pos)<.05)pos=target;draw();
+    if(pos!==target)requestAnimationFrame(tick);else ticking=false}
+  addEventListener('scroll',onScroll,{passive:true});
+  let rt;addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(()=>{const k=set();if(k!==cur){cur=k;load(k)}size()},120)});
+  size();load(cur);onScroll();
 })();
 
-/* ===================== kínálat kártyák ===================== */
+/* ===== kínálat ===== */
 (function(){
   const items=[
-    {n:'Sima lángos',d:'Sóval, ahogy a legtöbben szeretik.',o:{}},
-    {n:'Fokhagymás',d:'Fokhagymás lével megkenve.',o:{fok:1}},
-    {n:'Sajtos-tejfölös',d:'Tejföllel, reszelt sajttal.',o:{tejfol:1,sajt:1}},
-    {n:'Fokhagymás-sajtos-tejfölös',d:'Minden rajta. A legtöbben ezt kérik.',o:{fok:1,tejfol:1,sajt:1},tag:'Legnépszerűbb'}];
+    {n:'Sima lángos',d:'Sóval, ahogy a legtöbben szeretik.',img:'v-sima.jpg'},
+    {n:'Fokhagymás',d:'Fokhagymás lével megkenve.',img:'v-sima.jpg',pos:'30% 50%'},
+    {n:'Sajtos-tejfölös',d:'Tejföllel, bőven reszelt sajttal.',img:'v-sajtos.jpg'},
+    {n:'Fokhagymás-sajtos-tejfölös',d:'Minden rajta. A legtöbben ezt kérik.',img:'v-sajtos.jpg',pos:'70% 50%',tag:'Legnépszerűbb'}];
   const box=document.getElementById('cards');
-  items.forEach((it,i)=>{
-    const c=document.createElement('article');c.className='card rv';c.style.setProperty('--d',(i*.1)+'s');
-    c.innerHTML=`<div class="pic">${it.tag?`<em>${it.tag}</em>`:''}<svg viewBox="0 0 600 600" aria-hidden="true"></svg></div><div class="txt"><h3>${it.n}</h3><p>${it.d}</p></div>`;
-    box.appendChild(c);langos(c.querySelector('svg'),it.o,20+i*7)});
+  items.forEach((it,i)=>{const c=document.createElement('article');c.className='card rv';c.style.setProperty('--d',(i*.1)+'s');
+    c.innerHTML=`<div class="pic">${it.tag?`<em>${it.tag}</em>`:''}<img src="img/${it.img}" alt="${it.n}" loading="lazy" style="object-position:${it.pos||'50% 50%'}"></div><div class="txt"><h3>${it.n}</h3><p>${it.d}</p></div>`;
+    box.appendChild(c)});
 })();
 
-/* ===================== összerakó ===================== */
+/* ===== összerakó ===== */
 (function(){
-  const T=[{k:'fok',n:'Fokhagyma',s:'fokhagymás lével',c:'#f4efe0'},{k:'tejfol',n:'Tejföl',s:'bőven',c:'#fffaf0'},{k:'sajt',n:'Sajt',s:'reszelve',c:'#f2b928'}];
-  const st={fok:false,tejfol:false,sajt:false,db:1};
-  const opts=document.getElementById('opts'),svg=document.getElementById('buildSvg'),say=document.getElementById('say');
+  const T=[{k:'fok',n:'Fokhagyma',s:'fokhagymás lével',c:'#f4efe0'},{k:'tejfol',n:'Tejföl',s:'bőven',c:'#fffaf0'},{k:'sajt',n:'Sajt',s:'reszelve',c:'#f2c94c'}];
+  const st={fok:false,tejfol:false,sajt:false,db:1},plate=document.getElementById('plate'),say=document.getElementById('say'),opts=document.getElementById('opts');
   T.forEach(t=>{const b=document.createElement('button');b.type='button';b.className='opt';b.setAttribute('aria-pressed','false');
     b.innerHTML=`<i style="background:${t.c}"></i><span>${t.n}<small>${t.s}</small></span>`;
     b.onclick=()=>{st[t.k]=!st[t.k];b.setAttribute('aria-pressed',st[t.k]);upd(true)};opts.appendChild(b)});
@@ -367,18 +301,16 @@ function langos(svg,{tejfol,sajt,fok},seed=11){
   document.getElementById('plus').onclick=()=>{st.db=Math.min(20,st.db+1);upd()};
   function name(){const p=[];if(st.fok)p.push('fokhagymás');if(st.tejfol&&st.sajt)p.push('sajtos-tejfölös');else{if(st.sajt)p.push('sajtos');if(st.tejfol)p.push('tejfölös')}
     return p.length?p.join('-')+' lángos':'sima lángos'}
-  let rot=0;
-  function upd(spin){
-    langos(svg,st,11);
-    if(spin){rot+=120;svg.style.transform=`rotate(${rot}deg)`}
+  function upd(bump){
+    plate.classList.toggle('top',st.tejfol||st.sajt);
+    if(bump){plate.classList.add('bump');setTimeout(()=>plate.classList.remove('bump'),500)}
     const n=name();document.getElementById('bname').textContent=n[0].toUpperCase()+n.slice(1);
     document.getElementById('cnt').value=st.db;document.getElementById('bcount').textContent=`${st.db} db, elvitelre`;
-    say.textContent=`Jó napot! Szeretnék kérni ${st.db} ${n.replace(/lángos$/,'lángost')}, elvitelre. Kb. mikorra lesz kész?`;
-  }
+    say.textContent=`Jó napot! Szeretnék kérni ${st.db} ${n.replace(/lángos$/,'lángost')}, elvitelre. Kb. mikorra lesz kész?`}
   upd();
 })();
 
-/* ===================== nyitvatartás ===================== */
+/* ===== nyitvatartás ===== */
 (function(){
   const D=['Hétfő','Kedd','Szerda','Csütörtök','Péntek','Szombat','Vasárnap'],O=[null,[540,1140],[540,1140],[540,1140],[540,1140],null,null];
   const t=m=>`${Math.floor(m/60)}:${String(m%60).padStart(2,'0')}`,now=new Date(),d=(now.getDay()+6)%7,m=now.getHours()*60+now.getMinutes(),o=O[d],open=o&&m>=o[0]&&m<o[1];
@@ -387,20 +319,14 @@ function langos(svg,{tejfol,sajt,fok},seed=11){
   document.getElementById('hours').innerHTML=D.map((n,i)=>`<tr class="${i===d?'now':''}"><td>${n}${i===d?', ma':''}</td><td>${O[i]?t(O[i][0])+'–'+t(O[i][1]):'Zárva'}</td></tr>`).join('');
 })();
 
-/* ===================== beúszások ===================== */
+/* ===== beúszások ===== */
 (function(){
-  // címek szavanként
-  document.querySelectorAll('.split').forEach(h=>{
-    const nodes=[...h.childNodes];h.innerHTML='';let i=0;
-    nodes.forEach(n=>{
-      if(n.nodeType===3){n.textContent.split(/(\s+)/).forEach(w=>{if(!w.trim()){h.append(w);return}
+  document.querySelectorAll('.split').forEach(h=>{const nodes=[...h.childNodes];h.innerHTML='';let i=0;
+    nodes.forEach(n=>{if(n.nodeType===3){n.textContent.split(/(\s+)/).forEach(w=>{if(!w.trim()){h.append(w);return}
         const s=document.createElement('span');s.className='w';s.innerHTML=`<span style="--d:${(i++*.07).toFixed(2)}s">${w}</span>`;h.append(s)})}
-      else{const s=document.createElement('span');s.className='w';s.style.display='block';const inner=document.createElement('span');inner.style.setProperty('--d',(i++*.07+.1).toFixed(2)+'s');inner.append(n);s.append(inner);h.append(s)}
-    })});
-  const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;e.target.classList.add('in');io.unobserve(e.target);
-    e.target.querySelectorAll?.('[data-count]').forEach(countUp);if(e.target.dataset.count)countUp(e.target)}),{threshold:.18});
+      else{const s=document.createElement('span');s.className='w';s.style.display='block';const inner=document.createElement('span');inner.style.setProperty('--d',(i++*.07+.1).toFixed(2)+'s');inner.append(n);s.append(inner);h.append(s)}})});
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;e.target.classList.add('in');io.unobserve(e.target);e.target.querySelectorAll('[data-count]').forEach(countUp)}),{threshold:.18});
   document.querySelectorAll('.rv,.split').forEach(x=>io.observe(x));
-  // a hero szövegei azonnal
   requestAnimationFrame(()=>document.querySelectorAll('.copy .rv,.copy .split').forEach(x=>x.classList.add('in')));
   function countUp(b){const to=+b.dataset.count,dec=+(b.dataset.dec||0),t0=performance.now();
     (function f(t){const k=Math.min(1,(t-t0)/1400),v=to*(1-Math.pow(1-k,3));b.textContent=v.toFixed(dec).replace('.',',');if(k<1)requestAnimationFrame(f)})(t0)}
