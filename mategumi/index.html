@@ -394,12 +394,12 @@ const lerp=(a,b,t)=>a+(b-a)*t;
     ok.innerHTML=`<b>Megkaptuk a kérésed.</b>${[...chosen].join(', ')||'Időpontkérés'}, ${nap}. Hamarosan visszahívunk a pontos időponttal. <span style="color:var(--muted)">(Mintaoldal: valójában nem került elküldésre.)</span>`};
 })();
 
-/* ===================== nyitvatartás (a Google Térkép adatai alapján töltendő ki) ===================== */
+/* ===================== nyitvatartás (Google Térkép szerint) ===================== */
 (function(){
   const D=['Hétfő','Kedd','Szerda','Csütörtök','Péntek','Szombat','Vasárnap'];
-  const O=[null,null,null,null,null,null,null]; // pl. [480,1020] = 8:00–17:00
+  const O=[[480,960],[480,960],[480,960],[480,960],[480,960],null,null];
   const t=m=>`${Math.floor(m/60)}:${String(m%60).padStart(2,'0')}`,d=(new Date().getDay()+6)%7;
-  document.getElementById('hours').innerHTML=D.map((n,i)=>`<tr class="${i===d?'now':''}"><td>${n}${i===d?', ma':''}</td><td>${O[i]?t(O[i][0])+'–'+t(O[i][1]):'<span class="ph">egyeztetendő</span>'}</td></tr>`).join('');
+  document.getElementById('hours').innerHTML=D.map((n,i)=>`<tr class="${i===d?'now':''}"><td>${n}${i===d?', ma':''}</td><td>${O[i]?t(O[i][0])+'–'+t(O[i][1]):'Zárva'}</td></tr>`).join('');
 })();
 
 /* ===================== beúszások ===================== */
