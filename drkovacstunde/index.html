@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dr. Kovács Tünde – Ortopéd szakorvos, Győr</title>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bone:#f1ece2;--card:#fbf8f2;--ink:#18211f;--muted:#5c6663;--teal:#17433f;--teal2:#21615a;--ochre:#c08a3e;--line:#dcd5c7}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bone);color:var(--ink);font:400 17px/1.65 Figtree,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--teal2);outline-offset:3px}
+h1,h2,h3{font-family:Newsreader,Georgia,serif;font-weight:400;margin:0;line-height:1.06;letter-spacing:-.012em}
+.wrap{max-width:1160px;margin:0 auto;padding:0 clamp(18px,4vw,40px)}
+
+header{position:fixed;inset:0 0 auto;z-index:20;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+header.solid{background:rgba(241,236,226,.92);backdrop-filter:blur(10px);border-color:var(--line)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:70px}
+.brand{font-weight:700}.brand span{display:block;font-weight:400;color:var(--muted);font-size:.82rem}
+header nav{display:flex;gap:26px;font-size:.95rem}header nav a{text-decoration:none;color:var(--muted)}header nav a:hover{color:var(--ink)}
+@media(max-width:820px){header nav{display:none}}
+.btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font:600 15px Figtree;padding:12px 20px;border-radius:999px;border:1.5px solid var(--teal);cursor:pointer;transition:background .15s,color .15s}
+.btn.solid{background:var(--teal);color:#fff}.btn.solid:hover{background:var(--teal2)}
+.btn.line{background:transparent;color:var(--teal)}.btn.line:hover{background:rgba(23,67,63,.07)}
+
+/* hero: görgetésre egyenesbe rendeződő csigolyák */
+.scene{height:240vh;position:relative}
+.stage{position:sticky;top:0;height:100vh;overflow:hidden;display:grid;grid-template-columns:1.1fr 1fr;align-items:center;gap:clamp(24px,4vw,64px);padding:70px clamp(18px,6vw,96px) 0;max-width:1300px;margin:0 auto}
+@media(max-width:900px){.stage{grid-template-columns:1fr;align-content:end;padding-bottom:96px}}
+.kicker{font-weight:600;color:var(--teal2);margin-bottom:16px}
+h1{font-size:clamp(2.7rem,6.2vw,4.8rem)}
+h1 i{font-style:italic;color:var(--teal)}
+.lede{color:var(--muted);font-size:1.12rem;max-width:44ch;margin:20px 0 28px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.spine{position:relative;height:min(78vh,700px);display:grid;place-items:center}
+.spine svg{height:min(68vh,600px);width:auto;overflow:visible;display:block}
+.spine .cap{position:absolute;bottom:0;left:50%;transform:translateX(-50%);font-size:.78rem;color:var(--muted);white-space:nowrap}
+@media(max-width:900px){.spine{position:absolute;inset:78px 0 auto 0;height:30vh}.spine svg{height:30vh}.spine .cap{display:none}h1{font-size:clamp(2.3rem,10vw,3rem)}.lede{font-size:1rem;margin:14px 0 20px}}
+
+section{padding:clamp(64px,9vw,112px) 0;border-top:1px solid var(--line)}
+.sh{display:grid;grid-template-columns:1fr 1.25fr;gap:clamp(20px,4vw,56px);margin-bottom:clamp(30px,5vw,48px)}
+@media(max-width:900px){.sh{grid-template-columns:1fr}}
+.sh h2{font-size:clamp(2.1rem,4.6vw,3.3rem)}
+.sh p{color:var(--muted);margin:0;max-width:52ch;align-self:end}
+
+/* "Miben kérdezhet?" – témaválasztó */
+.topics{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(24px,4vw,56px);align-items:start}
+@media(max-width:900px){.topics{grid-template-columns:1fr}}
+.tlist{display:flex;flex-direction:column;gap:8px}
+.tbtn{all:unset;box-sizing:border-box;display:flex;justify-content:space-between;align-items:center;padding:16px 20px;border:1px solid var(--line);border-radius:14px;background:var(--card);cursor:pointer;font-weight:600;transition:border-color .2s,background .2s}
+.tbtn:focus-visible{outline:2px solid var(--teal2);outline-offset:2px}
+.tbtn span{color:var(--muted);font-weight:400;font-size:.92rem}
+.tbtn[aria-selected="true"]{background:var(--teal);color:#fff;border-color:var(--teal)}
+.tbtn[aria-selected="true"] span{color:#cfe1dd}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:clamp(24px,3vw,36px);position:sticky;top:96px}
+.panel .k{font-size:.85rem;font-weight:600;color:var(--ochre)}
+.panel h3{font-size:2rem;margin:8px 0 12px}
+.panel p{color:var(--muted);margin:0 0 18px}
+.panel ul{margin:0 0 22px;padding-left:20px;color:var(--ink)}.panel li{margin:4px 0}
+.panel.enter{animation:pin .35s ease}@keyframes pin{from{opacity:.3;transform:translateY(8px)}}
+
+/* rendelés */
+.visit{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:900px){.visit{grid-template-columns:1fr}}
+.visit div{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px}
+.visit b{display:block;font:400 2rem/1.1 Newsreader,serif;color:var(--teal);margin-bottom:8px}
+.visit p{margin:0;color:var(--muted)}
+
+.contact{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(24px,4vw,48px)}
+@media(max-width:900px){.contact{grid-template-columns:1fr}}
+.rows{border-top:1px solid var(--line);margin:0}
+.rows div{display:grid;grid-template-columns:140px 1fr;gap:12px;padding:15px 0;border-bottom:1px solid var(--line)}
+.rows dt{color:var(--muted);font-size:.92rem}.rows dd{margin:0;font-weight:500}
+.rows a{text-decoration:none;border-bottom:1px solid #c9c1b0}.rows a:hover{border-color:var(--teal)}
+iframe{width:100%;height:100%;min-height:360px;border:0;border-radius:16px;filter:grayscale(.45)}
+.note{color:var(--muted);font-size:.9rem;margin-top:16px}
+footer{border-top:1px solid var(--line);padding:26px 0 100px;color:var(--muted);font-size:.9rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.mbar{display:none;position:fixed;inset:auto 0 0;padding:10px 16px;background:rgba(241,236,226,.96);border-top:1px solid var(--line);z-index:30;gap:10px}
+.mbar .btn{flex:1;justify-content:center}
+@media(max-width:820px){.mbar{display:flex}}
+
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.scene{height:auto}.stage{position:relative;height:auto;min-height:100vh}}
+</style>
+<style id="demo-note-css">.demo-note{position:fixed!important;left:16px!important;bottom:16px!important;top:auto!important;right:auto!important;z-index:2147483647!important;display:flex!important;align-items:center;gap:8px;background:#fff6d6!important;color:#3a2e00!important;border:1px solid #e0c35a!important;font:500 13px/1.3 system-ui,-apple-system,"Segoe UI",sans-serif!important;padding:8px 14px!important;border-radius:999px!important;box-shadow:0 8px 24px rgba(0,0,0,.28)!important;max-width:calc(100vw - 32px)!important;pointer-events:none;letter-spacing:0!important;text-transform:none!important}.demo-note b{font-weight:700;letter-spacing:.06em}.demo-note i{width:8px;height:8px;border-radius:50%;background:#d4a21a;flex:0 0 8px}@media(max-width:820px){.demo-note{bottom:84px!important;font-size:12px!important}}</style>
+</head>
+<body><div class="demo-note" role="note"><i></i><span><b>MINTAOLDAL</b> – bemutató célra készült, nem a vállalkozás hivatalos oldala.</span></div>
+
+<header id="hdr"><div class="wrap">
+  <div class="brand">Dr. Kovács Tünde<span>Ortopéd szakorvos · Győr</span></div>
+  <nav><a href="#temak">Szakterületek</a><a href="#rendeles">Rendelés</a><a href="#elerhetoseg">Elérhetőség</a></nav>
+  <a class="btn solid" href="tel:+36302333575">Bejelentkezés</a>
+</div></header>
+
+<main>
+<section class="scene" id="scene" style="padding:0;border:0">
+  <div class="stage">
+    <div>
+      <div class="kicker">Ortopédiai magánrendelés · Győr</div>
+      <h1>Ortopédia, <i>gerinctől</i> a talpig.</h1>
+      <p class="lede">Dr. Kovács Tünde ortopéd szakorvos magánrendelése Győrben, a Szent Imre úton. Felnőtteknek és gyermekeknek, előzetes telefonos bejelentkezéssel.</p>
+      <div class="actions">
+        <a class="btn solid" href="tel:+36302333575">Bejelentkezés: 06 30 233 3575</a>
+        <a class="btn line" href="#temak">Szakterületek</a>
+      </div>
+    </div>
+    <div class="spine" aria-hidden="true">
+      <svg id="spine" viewBox="0 0 200 620"></svg>
+      <div class="cap">Szemléltető grafika · görgessen</div>
+    </div>
+  </div>
+</section>
+
+<section id="temak">
+  <div class="wrap">
+    <div class="sh"><h2 class="rv">Miben kérdezhet a rendelésen?</h2><p class="rv">Válasszon egy témát. Az oldal nem ad orvosi tanácsot: a teendőket mindig a személyes vizsgálat határozza meg.</p></div>
+    <div class="topics">
+      <div class="tlist rv" role="tablist" id="tlist"></div>
+      <div class="panel rv" id="panel" role="tabpanel" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<section id="rendeles">
+  <div class="wrap">
+    <div class="sh"><h2 class="rv">A rendelésről</h2><p class="rv">Magánrendelés előzetes bejelentkezéssel. Az aktuális időpontokról telefonon érdeklődjön.</p></div>
+    <div class="visit">
+      <div class="rv"><b>Szerda</b><p>Magánrendelés 16:00–19:00 között, a Rehab-Rába Kft. rendelőjében.</p></div>
+      <div class="rv" style="--d:.08s"><b>Telefonon</b><p>Előzetes bejelentkezés szükséges a 06 30 233 3575-ös számon.</p></div>
+      <div class="rv" style="--d:.16s"><b>Leletekkel</b><p>Hozza magával a korábbi röntgen-, MR- vagy CT-leleteit és zárójelentéseit.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="elerhetoseg">
+  <div class="wrap">
+    <div class="sh"><h2 class="rv">Elérhetőség</h2><p class="rv">Sürgős panasz esetén ne e-mailt írjon: hívja a 112-t, vagy forduljon a legközelebbi ügyelethez.</p></div>
+    <div class="contact">
+      <div class="rv">
+        <dl class="rows">
+          <div><dt>Rendelő</dt><dd>9024 Győr, Szent Imre út 43.</dd></div>
+          <div><dt>Bejelentkezés</dt><dd><a href="tel:+36302333575">06 30 233 3575</a></dd></div>
+          <div><dt>Mobil</dt><dd><a href="tel:+36704510557">06 70 451 0557</a></dd></div>
+          <div><dt>Rendelési idő</dt><dd>Szerda 16:00–19:00</dd></div>
+        </dl>
+        <p class="note">A rendelési idő változhat; bejelentkezéskor egyeztesse.</p>
+      </div>
+      <iframe class="rv" style="--d:.1s" loading="lazy" title="A rendelő a térképen" src="https://www.google.com/maps?q=Gy%C5%91r,+Szent+Imre+%C3%BAt+43,+9024&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>Dr. Kovács Tünde · ortopéd szakorvos</span><span>9024 Győr, Szent Imre út 43.</span></div></footer>
+<div class="mbar"><a class="btn solid" href="tel:+36302333575">Bejelentkezés</a><a class="btn line" href="#elerhetoseg">Útvonal</a></div>
+
+<script>
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const clamp=(v,a=0,b=1)=>Math.min(b,Math.max(a,v));
+/* --- csigolyák --- */
+(function(){
+  const svg=document.getElementById('spine'),NS='http://www.w3.org/2000/svg',N=17,parts=[];
+  for(let i=0;i<N;i++){
+    const t=i/(N-1),w=34+t*26,h=22+t*8,y=34+i*33;
+    const g=document.createElementNS(NS,'g');
+    g.innerHTML=`<rect x="${-w/2}" y="${-h/2}" width="${w}" height="${h}" rx="${h*.42}" fill="#fbf8f2" stroke="#17433f" stroke-width="2"/>`+
+      `<path d="M${-w/2-10} 0 L${-w/2} -3 M${w/2} -3 L${w/2+10} 0" stroke="#17433f" stroke-width="2" stroke-linecap="round"/>`+
+      `<circle r="3" fill="#c08a3e" opacity=".9"/>`;
+    svg.appendChild(g);parts.push({g,y,i});
+  }
+  const disc=document.createElementNS(NS,'path');disc.setAttribute('fill','none');disc.setAttribute('stroke','#c08a3e');disc.setAttribute('stroke-width','1.5');disc.setAttribute('stroke-dasharray','3 5');disc.setAttribute('opacity','.6');svg.insertBefore(disc,svg.firstChild);
+  const scene=document.getElementById('scene'),hdr=document.getElementById('hdr');
+  let target=0,p=0,tick=false;
+  function read(){const tot=scene.offsetHeight-innerHeight;target=reduce?1:clamp((scrollY-scene.offsetTop)/Math.max(1,tot)/.8);if(!tick){tick=true;requestAnimationFrame(step)}hdr.classList.toggle('solid',scrollY>20)}
+  function step(){
+    p+=(target-p)*.14;if(Math.abs(target-p)<.001)p=target;
+    const e=p<.5?2*p*p:1-Math.pow(-2*p+2,2)/2,amp=(1-e)*30;let d='';
+    parts.forEach(({g,y,i})=>{const t=i/(N-1),x=100+Math.sin(t*Math.PI*1.6+.3)*amp,rot=Math.cos(t*Math.PI*1.6+.3)*amp*.55;
+      g.setAttribute('transform',`translate(${x} ${y}) rotate(${rot})`);d+=(i?'L':'M')+x+' '+y});
+    disc.setAttribute('d',d);
+    if(p!==target)requestAnimationFrame(step);else tick=false;
+  }
+  addEventListener('scroll',read,{passive:true});read();
+})();
+/* --- témák --- */
+(function(){
+  const T=[
+    ['Gerinc','gerincferdülés','Gerincferdülés','Felnőttek és gyermekek gerincferdülésével kapcsolatos vizsgálat és tanácsadás.',['Korábbi gerincröntgen, ha van','Mióta észlelik az eltérést','Gyermeknél: növekedéssel kapcsolatos változások']],
+    ['Derék','derékfájás','Derékfájás','Derékfájással és a hát alsó részének panaszaival kapcsolatos ortopédiai vizsgálat.',['Mikor kezdődött a fájdalom','Mi enyhíti, mi rontja','Korábbi MR- vagy röntgenlelet']],
+    ['Térd','térdpanaszok','Térdpanaszok','Térdfájdalom, mozgáskorlátozottság és egyéb térdpanaszok ortopédiai vizsgálata.',['Volt-e sérülés, baleset','Terhelésre vagy nyugalomban jelentkezik','Korábbi leletek']],
+    ['Ízületek','ízületi betegségek','Ízületi panaszok','Ízületi fájdalommal és ízületi betegségekkel kapcsolatos konzultáció.',['Mely ízületeket érinti','Reggeli merevség, duzzanat','Szedett gyógyszerek listája']],
+    ['Láb','lúdtalpbetét','Lúdtalp, lúdtalpbetét','Lúdtalppal és talpbetéttel kapcsolatos kérdések.',['A rendszeresen hordott cipő','Meglévő talpbetét, ha van','Milyen terhelésnél jelentkezik panasz']],
+    ['Gyermek','gyermekortopédia','Gyermekortopédia','Gyermekek ortopédiai vizsgálata: tartás, láb, gerinc.',['A gyermek korábbi leletei','Mit vettek észre a szülők','Kényelmes, levehető ruha']]];
+  const list=document.getElementById('tlist'),panel=document.getElementById('panel');
+  const btns=T.map((t,i)=>{const b=document.createElement('button');b.className='tbtn';b.setAttribute('role','tab');b.innerHTML=`${t[0]}<span>${t[1]}</span>`;b.onclick=()=>pick(i);list.appendChild(b);return b});
+  function pick(i){btns.forEach((b,j)=>{b.setAttribute('aria-selected',i===j);b.tabIndex=i===j?0:-1});const t=T[i];
+    panel.innerHTML=`<div class="k">${t[0]}</div><h3>${t[2]}</h3><p>${t[3]}</p><p style="margin-bottom:8px;color:var(--ink);font-weight:600">Érdemes magával hoznia vagy átgondolnia:</p><ul>${t[4].map(x=>`<li>${x}</li>`).join('')}</ul><a class="btn solid" href="tel:+36302333575">Bejelentkezés telefonon</a>`;
+    panel.classList.remove('enter');void panel.offsetWidth;panel.classList.add('enter')}
+  list.addEventListener('keydown',e=>{const i=btns.indexOf(document.activeElement);if(i<0)return;let n;if(e.key==='ArrowDown'||e.key==='ArrowRight')n=(i+1)%btns.length;if(e.key==='ArrowUp'||e.key==='ArrowLeft')n=(i+btns.length-1)%btns.length;if(n!==undefined){e.preventDefault();pick(n);btns[n].focus()}});
+  pick(0);
+})();
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(x=>io.observe(x));
+</script>
+</body>
+</html>
