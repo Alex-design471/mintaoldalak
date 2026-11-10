@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dr. Iván Miklós – Háziorvos, Budapest VI.</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#f5f3ee;--card:#fffefb;--ink:#1c2230;--muted:#5d6472;--enamel:#203a6b;--enamel2:#2b4c86;--line:#dedad0;--mint:#2f7d6b}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.65 "Public Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--enamel2);outline-offset:3px}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:400;margin:0;line-height:1.08;letter-spacing:-.01em}
+.wrap{max-width:1140px;margin:0 auto;padding:0 clamp(18px,4vw,40px)}
+
+header{position:sticky;top:0;z-index:20;background:rgba(245,243,238,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:68px}
+.brand{font-weight:700;font-size:1.02rem}.brand span{display:block;font-weight:400;color:var(--muted);font-size:.8rem}
+header nav{display:flex;gap:26px;font-size:.95rem}header nav a{text-decoration:none;color:var(--muted)}header nav a:hover{color:var(--ink)}
+@media(max-width:820px){header nav{display:none}}
+.btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font:600 15px "Public Sans";padding:12px 20px;border-radius:8px;border:1.5px solid var(--enamel);cursor:pointer;transition:background .15s,color .15s}
+.btn.solid{background:var(--enamel);color:#fff}.btn.solid:hover{background:var(--enamel2)}
+.btn.line{background:transparent;color:var(--enamel)}.btn.line:hover{background:rgba(32,58,107,.06)}
+
+/* hero: a ház falára szerelt utcanévtábla */
+.hero{padding:clamp(48px,8vw,96px) 0 clamp(56px,8vw,96px)}
+.hero .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(32px,5vw,72px);align-items:center}
+@media(max-width:900px){.hero .wrap{grid-template-columns:1fr}}
+.kicker{font-weight:600;color:var(--mint);font-size:.95rem;margin-bottom:14px}
+h1{font-size:clamp(2.6rem,6vw,4.4rem)}
+.lede{color:var(--muted);font-size:1.12rem;max-width:44ch;margin:20px 0 28px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.wall{position:relative;aspect-ratio:5/4;border-radius:14px;overflow:hidden;
+  background:
+    linear-gradient(0deg,rgba(0,0,0,.05),transparent 40%),
+    repeating-linear-gradient(0deg,transparent 0 46px,rgba(120,100,70,.12) 46px 48px),
+    #e9dcc6;
+  box-shadow:inset 0 0 0 1px rgba(0,0,0,.05)}
+.wall::before{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .38 0 0 0 0 .28 0 0 0 .35 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.plate{position:absolute;left:50%;top:36%;width:min(84%,440px);transform:translate(-50%,-50%) rotate(-1.2deg);
+  background:linear-gradient(180deg,var(--enamel2),var(--enamel));color:#fff;border-radius:10px;padding:18px 22px 16px;
+  box-shadow:0 2px 0 #142748,0 18px 30px rgba(20,30,50,.35),inset 0 0 0 3px #fff,inset 0 0 0 5px var(--enamel);
+  transform-origin:50% 0;animation:hang 1.4s cubic-bezier(.3,1.6,.5,1) .2s both}
+@keyframes hang{from{transform:translate(-50%,-50%) rotate(-9deg);opacity:0}to{transform:translate(-50%,-50%) rotate(-1.2deg);opacity:1}}
+.plate small{display:block;font:600 .78rem/1 "Public Sans";letter-spacing:.14em;opacity:.85}
+.plate b{display:block;font:600 clamp(1.7rem,3.4vw,2.4rem)/1.05 Fraunces,serif;margin:8px 0 4px;letter-spacing:.01em}
+.plate span{font:500 .92rem "Public Sans";opacity:.9}
+.plate::before,.plate::after{content:"";position:absolute;top:50%;width:9px;height:9px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#eee,#888);transform:translateY(-50%)}
+.plate::before{left:9px}.plate::after{right:9px}
+.door{position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:44%;height:30%;background:#5b4632;border-radius:8px 8px 0 0;box-shadow:inset 0 0 0 6px #4a3828}
+.door i{position:absolute;right:16%;top:50%;width:8px;height:8px;border-radius:50%;background:#d8b46a}
+.sign{position:absolute;right:6%;bottom:9%;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:8px 12px;font:600 .82rem/1.3 "Public Sans";color:var(--ink);box-shadow:0 6px 14px rgba(0,0,0,.12)}
+.sign em{display:block;font-style:normal;font-weight:400;color:var(--muted)}
+
+section{padding:clamp(64px,9vw,112px) 0;border-top:1px solid var(--line)}
+.sh{display:grid;grid-template-columns:1fr 1.25fr;gap:clamp(20px,4vw,56px);margin-bottom:clamp(30px,5vw,48px)}
+@media(max-width:900px){.sh{grid-template-columns:1fr}}
+.sh h2{font-size:clamp(2rem,4.4vw,3.1rem)}
+.sh p{color:var(--muted);margin:0;max-width:52ch;align-self:end}
+
+/* ellátás */
+.care{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:900px){.care{grid-template-columns:1fr}}
+.care article{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:26px}
+.care h3{font-size:1.45rem;margin-bottom:8px}
+.care p{color:var(--muted);margin:0}
+
+/* mit hozzak – kipipálható lista */
+.bring{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,56px);align-items:start}
+@media(max-width:900px){.bring{grid-template-columns:1fr}}
+.list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.list li{border-bottom:1px solid var(--line)}
+.list button{all:unset;box-sizing:border-box;width:100%;display:flex;gap:16px;align-items:flex-start;padding:16px 4px;cursor:pointer}
+.list button:focus-visible{outline:2px solid var(--enamel2);outline-offset:2px}
+.box{flex:0 0 24px;height:24px;border-radius:6px;border:1.5px solid #b9b3a5;display:grid;place-items:center;margin-top:2px;transition:background .2s,border-color .2s}
+.box svg{width:14px;height:14px;stroke:#fff;fill:none;stroke-width:3;opacity:0;transform:scale(.6);transition:opacity .2s,transform .2s}
+.list b{display:block;font-weight:600}.list span{color:var(--muted);font-size:.95rem}
+.list [aria-pressed="true"] .box{background:var(--mint);border-color:var(--mint)}
+.list [aria-pressed="true"] .box svg{opacity:1;transform:none}
+.progress{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:26px;position:sticky;top:92px}
+.progress .n{font:400 3.4rem/1 Fraunces,serif;color:var(--enamel)}
+.progress .bar{height:8px;border-radius:4px;background:#ebe7dd;margin:16px 0;overflow:hidden}
+.progress .bar i{display:block;height:100%;width:0;background:var(--mint);border-radius:4px;transition:width .4s cubic-bezier(.2,.7,.2,1)}
+.progress p{color:var(--muted);margin:0}
+
+/* sürgős */
+.urgent{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+@media(max-width:760px){.urgent{grid-template-columns:1fr}}
+.urgent div{border-radius:12px;padding:24px 26px;background:var(--card);border:1px solid var(--line)}
+.urgent div.red{background:#fbeeea;border-color:#efcfc6}
+.urgent b{font:400 2.4rem/1 Fraunces,serif;display:block;margin-bottom:8px}
+.urgent .red b{color:#a83a24}
+.urgent p{margin:0;color:var(--muted)}
+
+/* elérhetőség */
+.contact{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(24px,4vw,48px)}
+@media(max-width:900px){.contact{grid-template-columns:1fr}}
+.rows{border-top:1px solid var(--line)}
+.rows div{display:grid;grid-template-columns:130px 1fr;gap:12px;padding:16px 0;border-bottom:1px solid var(--line)}
+.rows dt{color:var(--muted);font-size:.92rem}.rows dd{margin:0;font-weight:500}
+.rows a{text-decoration:none;border-bottom:1px solid #c8c2b4}.rows a:hover{border-color:var(--enamel)}
+iframe{width:100%;height:100%;min-height:360px;border:0;border-radius:12px;filter:grayscale(.4)}
+.note{color:var(--muted);font-size:.9rem;margin-top:16px}
+footer{border-top:1px solid var(--line);padding:26px 0 100px;color:var(--muted);font-size:.9rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.mbar{display:none;position:fixed;inset:auto 0 0;padding:10px 16px;background:rgba(245,243,238,.96);border-top:1px solid var(--line);z-index:30;gap:10px}
+.mbar .btn{flex:1;justify-content:center}
+@media(max-width:820px){.mbar{display:flex}}
+
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.plate{animation:none}}
+</style>
+<style id="demo-note-css">.demo-note{position:fixed!important;left:16px!important;bottom:16px!important;top:auto!important;right:auto!important;z-index:2147483647!important;display:flex!important;align-items:center;gap:8px;background:#fff6d6!important;color:#3a2e00!important;border:1px solid #e0c35a!important;font:500 13px/1.3 system-ui,-apple-system,"Segoe UI",sans-serif!important;padding:8px 14px!important;border-radius:999px!important;box-shadow:0 8px 24px rgba(0,0,0,.28)!important;max-width:calc(100vw - 32px)!important;pointer-events:none;letter-spacing:0!important;text-transform:none!important}.demo-note b{font-weight:700;letter-spacing:.06em}.demo-note i{width:8px;height:8px;border-radius:50%;background:#d4a21a;flex:0 0 8px}@media(max-width:820px){.demo-note{bottom:84px!important;font-size:12px!important}}</style>
+</head>
+<body><div class="demo-note" role="note"><i></i><span><b>MINTAOLDAL</b> – bemutató célra készült, nem a vállalkozás hivatalos oldala.</span></div>
+
+<header><div class="wrap">
+  <div class="brand">Dr. Iván Miklós<span>Háziorvos · Budapest VI.</span></div>
+  <nav><a href="#ellatas">Ellátás</a><a href="#elso">Első alkalom</a><a href="#elerhetoseg">Elérhetőség</a></nav>
+  <a class="btn solid" href="tel:+3613322335">Hívás</a>
+</div></header>
+
+<main>
+<div class="hero"><div class="wrap">
+  <div>
+    <div class="kicker rv">Felnőtt háziorvosi rendelő · Terézváros</div>
+    <h1 class="rv" style="--d:.08s">Háziorvos a Szondi utcában.</h1>
+    <p class="lede rv" style="--d:.16s">Dr. Iván Miklós felnőtt háziorvosi rendelője Budapest VI. kerületében. Időpontért, receptért és a rendelés részleteiért hívja a rendelőt.</p>
+    <div class="actions rv" style="--d:.24s">
+      <a class="btn solid" href="tel:+3613322335">Rendelő: 06 1 332 2335</a>
+      <a class="btn line" href="#elerhetoseg">Útvonal</a>
+    </div>
+  </div>
+  <div class="wall rv" style="--d:.1s" aria-label="Utcanévtábla: VI. kerület, Szondi utca 49." role="img">
+    <div class="plate"><small>BUDAPEST · VI. KERÜLET</small><b>Szondi utca 49.</b><span>Háziorvosi rendelő</span></div>
+    <div class="door"><i></i></div>
+    <div class="sign">Dr. Iván Miklós<em>háziorvos</em></div>
+  </div>
+</div></div>
+
+<section id="ellatas">
+  <div class="wrap">
+    <div class="sh"><h2 class="rv">Amiben a rendelő segít</h2><p class="rv">Felnőtt háziorvosi ellátás Terézvárosban. A konkrét teendőket és az időpontot telefonon egyeztetheti.</p></div>
+    <div class="care">
+      <article class="rv"><h3>Háziorvosi ellátás</h3><p>Felnőtt betegek alapellátása: panaszok kivizsgálása, kezelése és a további lépések megbeszélése.</p></article>
+      <article class="rv" style="--d:.08s"><h3>Járóbeteg-ellátás</h3><p>Általános járóbeteg-ellátás a rendelőben, szükség esetén beutalással szakorvosi vizsgálatra.</p></article>
+      <article class="rv" style="--d:.16s"><h3>Receptek, igazolások</h3><p>Rendszeres gyógyszerek felírása és igazolások ügyében érdeklődjön telefonon a pontos menetről.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="elso">
+  <div class="wrap">
+    <div class="sh"><h2 class="rv">Első alkalommal jön?</h2><p class="rv">Pipálja ki, mi van már Önnél. Ezekkel gyorsabban megy a vizit.</p></div>
+    <div class="bring">
+      <ul class="list rv" id="list">
+        <li><button type="button" aria-pressed="false"><span class="box"><svg viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7"/></svg></span><span><b>TAJ-kártya</b><span>A társadalombiztosítási ellátáshoz szükséges.</span></span></button></li>
+        <li><button type="button" aria-pressed="false"><span class="box"><svg viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7"/></svg></span><span><b>Személyi igazolvány és lakcímkártya</b><span>A személyazonosság és a lakcím igazolásához.</span></span></button></li>
+        <li><button type="button" aria-pressed="false"><span class="box"><svg viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7"/></svg></span><span><b>Korábbi leletek, zárójelentések</b><span>A kórelőzmények áttekintéséhez.</span></span></button></li>
+        <li><button type="button" aria-pressed="false"><span class="box"><svg viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7"/></svg></span><span><b>A szedett gyógyszerek listája</b><span>Név, adag, és milyen gyakran szedi.</span></span></button></li>
+      </ul>
+      <aside class="progress rv" style="--d:.1s" aria-live="polite">
+        <div class="n" id="cnt">0 / 4</div>
+        <div class="bar"><i id="bar"></i></div>
+        <p id="msg">Kezdje a TAJ-kártyával.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sh"><h2 class="rv">Ha sürgős</h2><p class="rv">Rendelési időn kívül vagy sürgős esetben ne a rendelőt hívja.</p></div>
+    <div class="urgent">
+      <div class="red rv"><b>112</b><p>Életveszély vagy hirtelen, súlyos állapotromlás esetén azonnal.</p></div>
+      <div class="rv" style="--d:.08s"><b>1830</b><p>Háziorvosi ügyelet: ha rendelési időn kívül orvosi tanácsra van szüksége.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="elerhetoseg">
+  <div class="wrap">
+    <div class="sh"><h2 class="rv">Elérhetőség</h2><p class="rv">A rendelési időről és az aktuális tudnivalókról telefonon érdeklődjön.</p></div>
+    <div class="contact">
+      <div class="rv">
+        <dl class="rows">
+          <div><dt>Rendelő</dt><dd>1064 Budapest, Szondi utca 49.</dd></div>
+          <div><dt>Telefon</dt><dd><a href="tel:+3613322335">06 1 332 2335</a></dd></div>
+          <div><dt>Mobil</dt><dd><a href="tel:+36309318482">06 30 931 8482</a></dd></div>
+          <div><dt>E-mail</dt><dd><a href="mailto:drivanmiklos@gmail.com">drivanmiklos@gmail.com</a></dd></div>
+          <div><dt>Rendelési idő</dt><dd>Telefonon érdeklődjön</dd></div>
+        </dl>
+        <p class="note">Az e-mail nem sürgős ügyekre szolgál; sürgős esetben hívja a 112-t.</p>
+      </div>
+      <iframe class="rv" style="--d:.1s" loading="lazy" title="A rendelő a térképen" src="https://www.google.com/maps?q=Budapest,+Szondi+u.+49,+1064&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>Dr. Iván Miklós Bt. · háziorvos</span><span>1064 Budapest, Szondi utca 49.</span></div></footer>
+<div class="mbar"><a class="btn solid" href="tel:+3613322335">Hívás</a><a class="btn line" href="#elerhetoseg">Útvonal</a></div>
+
+<script>
+(function(){
+  const btns=[...document.querySelectorAll('#list button')],cnt=document.getElementById('cnt'),bar=document.getElementById('bar'),msg=document.getElementById('msg');
+  const tips=['Kezdje a TAJ-kártyával.','Jó úton jár.','Már csak kettő hiányzik.','Még egy, és kész.','Minden megvan. Hívja a rendelőt időpontért.'];
+  function upd(){const n=btns.filter(b=>b.getAttribute('aria-pressed')==='true').length;cnt.textContent=n+' / '+btns.length;bar.style.width=(n/btns.length*100)+'%';msg.textContent=tips[n]}
+  btns.forEach(b=>b.addEventListener('click',()=>{b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')!=='true');upd()}));upd();
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.rv').forEach(x=>io.observe(x));
+})();
+</script>
+</body>
+</html>
